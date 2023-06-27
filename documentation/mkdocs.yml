@@ -1,0 +1,89 @@
+site_name: iGEM Munich Software Wiki 2023
+
+repo_name: 2023/munichbioinformatics
+repo_url: https://gitlab.igem.org/2023/munichbioinformatics/
+
+markdown_extensions:
+  - tables
+  - pymdownx.escapeall:
+      hardbreak: true
+  -  pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascript/tablesort.js
+
+extra_css:
+  - assets/css/extra.css
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    # - navigation.path
+    # - navigation.prune
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - announce.dismiss
+  icon:
+    - repo: fontawesome/brands/gitlab
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Team:
+    - Team: team.md
+    - Attributions: attributions.md
+  - Project:
+    - Project: project.md
+    - Contribution: contribution.md
+    - Description: description.md
+    - Engineering: engineering.md
+    - Experiments: experiments.md
+    - Notebook: notebook.md
+    - Results: results.md
+  - Safety: safety.md
+  - Human Practices: human_practices.md
+  - Awards:
+    - Awards: awards.md
+    - Education: education.md
+    - Entrepreneurship: entrepreneurship.md
+    - Hardware: hardware.md
+    - Inclusivity: inclusivity.md
+    - Measurement: measurement.md
+    - Model: model.md
+    - Plant: plant.md
+    - Software: software.md
+    - Sustainable: sustainable.md
+  - Test: test.md
+
+extra:
+  generator: false
+  consent:
+    title: Cookie consent
+    description:
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+
+copyright:
+  Copyright &copy; 2023 iGEM Munich – <a href="#__consent">Change cookie settings</a>
