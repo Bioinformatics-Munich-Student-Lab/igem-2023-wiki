@@ -37,7 +37,7 @@ def home():
 
 
 @app.route('/<page>/')
-def serve_page(page):
+def pages(page):
     return render_template(str(Path(page)) + '/index.html')
 
 
