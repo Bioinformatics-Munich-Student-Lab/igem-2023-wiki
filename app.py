@@ -36,6 +36,30 @@ def home():
     return render_template('index.html')
 
 
+# @app.route('/assets')
+# def assets():
+#     return render_template('404.html')
+
+
+@app.route('/404.html')
+def error():
+    return render_template('404.html')
+
+
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/sitemap.xml.gz')
+def sitemap():
+    return render_template('404.html')
+
+@app.route('/sitemap.xml')
+def sitemapgz():
+    return render_template('sitemap.xml')
+
+
 @app.route('/<page>/')
 def pages(page):
     return render_template(str(Path(page)) + '/index.html')
