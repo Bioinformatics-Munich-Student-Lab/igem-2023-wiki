@@ -1,5 +1,7 @@
 page for testing
 
+this is a test
+
 | Method      | Description                          |
 | ----------- | ------------------------------------ |
 | `GET`       | :material-check:     Fetch resource  |

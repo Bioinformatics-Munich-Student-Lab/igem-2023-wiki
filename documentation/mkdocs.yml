@@ -10,6 +10,11 @@ markdown_extensions:
   -  pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
@@ -26,8 +31,6 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
-    # - navigation.path
-    # - navigation.prune
     - navigation.top
     - toc.follow
     - toc.integrate
@@ -70,6 +73,7 @@ nav:
     - Plant: plant.md
     - Software: software.md
     - Sustainable: sustainable.md
+  - Generic Tool Name Page: tool.md
   - Test: test.md
 
 extra:
