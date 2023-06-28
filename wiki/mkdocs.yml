@@ -6,6 +6,8 @@ repo_url: https://gitlab.igem.org/2023/munichbioinformatics/
 markdown_extensions:
   - tables
   - footnotes
+  - attr_list
+  - md_in_html
   - pymdownx.escapeall:
       hardbreak: true
   -  pymdownx.emoji:
