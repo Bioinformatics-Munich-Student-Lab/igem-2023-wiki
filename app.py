@@ -5,8 +5,8 @@ from flask import Flask, render_template, send_from_directory
 from flask_frozen import Freezer
 
 
-template_folder = path.abspath('./documentation/site')
-static_folder = path.abspath('./documentation/site')
+template_folder = path.abspath('./wiki/site')
+static_folder = path.abspath('./wiki/site')
 
 app = Flask(__name__,
             static_url_path='',
