@@ -31,9 +31,11 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - assets/javascript/tablesort.js
+  - assets/javascript/glightbox.js
 
 extra_css:
   - assets/css/extra.css
+  - assets/css/glightbox.css
 
 theme:
   name: material
@@ -125,3 +127,5 @@ copyright: >
 
 plugins:
   - glightbox
+  - search:
+      lang: en
