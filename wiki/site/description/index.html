@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -61,7 +72,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
   
     
     
@@ -118,7 +129,7 @@
             
             
             
-            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
             
               <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -128,7 +139,7 @@
             
             
             
-            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
             
               <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -139,39 +150,6 @@
       
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -561,56 +539,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
-  </a>
-  
-    <nav class="md-nav" aria-label="Background">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
-    Problem statement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#motivation" class="md-nav__link">
-    Motivation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#approach" class="md-nav__link">
     Approach
   </a>
   
-    <nav class="md-nav" aria-label="Approach">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#previous-work" class="md-nav__link">
-    Previous work
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#our-project" class="md-nav__link">
-    Our project
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -958,41 +896,54 @@
 
 
 <h1 id="project-description">Project Description</h1>
-<h3 id="abstract">Abstract</h3>
-<p>We have set the goal of aiding doctors in their drug prescriptions by tackling the worldwide problem of unexpected side effects arising due to polypharmacy. In order to accomplish this goal, we intend to train a neural network to predict potential side effects based on a patient’s drug intake.</p>
-<h2 id="background">Background</h2>
-<h3 id="problem-statement">Problem statement</h3>
-<p>Polypharmacy is the simultaneous use of multiple (generally defined as more than 5) medications by a patient.
-While often necessary, in some cases, polypharmacy is associated with various risks such as adverse drug interactions, increased side effects, medication non-adherence, and a decline in the patient's quality of life (Polypharmacy and Health-Related Quality of Life/Psychological Distress Among Patients With Chronic Disease, Van Wilder et al., 2022). Since polypharmacy side effects are notoriously difficult to predict, it can make adhering to the Primum non nocere (first, do no harm) principle very difficult.
-As such, Polypharmacy is recognized as an increasingly serious problem affecting nearly 15% of the U.S. population (Trends in Prescription Drug Use among Adults in the United States, Kantor et al., 2015) and causing treatment costs of over $177 billion a year in the U.S. alone (Drug-related morbidity and mortality: updating the cost-of-illness model, Ernst, and Grizzle, 2001). According to “A 12-gene pharmacogenetic panel to prevent adverse drug reactions: an open-label, multicentre, controlled, cluster- randomized crossover implementation study” by Swen et al. 2023, pharmacogenetic-panel testing alone can reduce a patient’s direct medical charges by more than USD 7000.
-The US are not the only country affected by this problem. In “Trends in polypharmacy and dispensed drugs among adults in the Netherlands as compared to the United States” Oktora et al. conducted a cross-sectional study in the netherlands, finding that polypharmacy prevalence increased from 3.1% to 8.0% over the time period from 1999 to 2014, as depicted in figure 1.</p>
-<figure>
-<p><img alt="Image title" src="../img/plot1.png" width="600" />
-  </p>
-<figcaption>Figure 1</figcaption>
-</figure>
-<h3 id="motivation">Motivation</h3>
-<p>Our team was deeply motivated to choose this project because of the personal experiences many of us have had with elderly family members, particularly our grandparents.
-Witnessing our grandparents taking a plethora of medications at once, with sometimes more than five just for breakfast, sparked a sense of concern and curiosity among us.
-It made us question the safety and efficacy of such an approach and led us to investigate polypharmacy.
-Socially, polypharmacy affects the quality of life of a large section of the population. Over 80% of nursing home residents (Predictors of drug prescription in nursing home residents: results from the INCUR study, Calcaterra et al., 2021)  and over 70% of hospitalized patients (Prevalence of Polypharmacy and Drug Interaction Among Hospitalized Patients: Opportunities and Responsibilities in Pharmaceutical Care, Trumic et al., 2012) are affected by polypharmacy.
-This indicates that a significant proportion of the community is at risk of adverse drug reactions, impacting not just their health but also the well-being of their families.
-Seeing the gravity of the situation and the role polypharmacy plays in the lives of our loved ones, we came to the conclusion that we ought to focus our efforts on alleviating the problem.</p>
+<h2 id="abstract">Abstract</h2>
+<p>A patient is described as undergoing polypharmacy if they simultaneously take more than five medications.
+While often necessary for treating multimorbid or vulnerable patients, polypharmacy is associated with various risks such as adverse drug interactions, increased incidence, and severity of side effects, poor compliance, and decline in the patient's quality of life<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.<br />
+Polypharmacy presents a distinct and frequently non-linear side effect profile that is, in many cases, still poorly understood.<br />
+Polypharmacy affects 15% of the general population in the U.S. and about 10-20% in different European countries, with the incidence of polypharmacy rising sharply with age and poor health; in care settings, polypharmacy incidences above 50% are not uncommon<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup>,</sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.<br />
+Globally, polypharmacy affects hundreds of millions of people, a trend that is rising as the global population ages.</p>
+<p>Because the number of possible combinations of different drugs increases exponentially with the number of drugs a patient is taking, systematic laboratory testing of every possible combination of drugs for unwanted side effects is not practical.<br />
+To nevertheless address the problem of drug-drug interaction, our project aims to use advanced graph-based machine learning algorithms to predict drug interactions from the knowledge we have gained about which pathways of the human body each drug affects.<br />
+Using this approach, it is also possible to incorporate knowledge of the individual genome or microbiome of the patient into the model, delivering care personalized to each patient.</p>
 <h2 id="approach">Approach</h2>
-<h3 id="previous-work">Previous work</h3>
-<p>We will base our project on the "Decagon" paper published in 2018 by Marinka Zitnik et al.
-The paper titled “Modeling Polypharmacy Side Effects with Graph Convolutional Networks”, is the most notable work in the field.
-This approach takes into account the polypharmacy side effects and models them using a multimodal graph that includes protein-protein interaction networks and drug-drug interaction networks.
-However, the presented method has its limitations.
-It only uses network information and does not incorporate chemical structure information.
-It only makes predictions for known compounds.
-The model has been trained on datasets that are over six years old at this point.
-It is implemented in TensorFlow, which has been surpassed by Pytorch as the standard in industry and academia.
-New technologies, such as Encoder/Decoder and Large Language Models (LLMs) have since emerged which have uprooted the entire field.
-Due to the lack of a user interface, there is a high barrier to entry for medical professionals. As such, clinicians, researchers, and biologists have not had the chance to make polypharmacy side effect predictions.
-We aim to improve every aspect mentioned above and integrate the work that has previously been done with our own novel approach.</p>
-<h3 id="our-project">Our project</h3>
-<p>Using the “Decagon”-model as a basis, we intend to train our own neural network using more recent datasets that include a greater number of drug interactions. Additionally, we will leverage the chemical structure of medications to increase our model’s accuracy for predictions on unknown compounds. We will also look into ways to improve the model’s architecture taking recent developments in the field of deep learning into account. Furthermore, we have developed a relationship with a team at the University Hospital RWTH Aachen, allowing us to rely on patient data and practical feedback, therefore ensuring that we will be able to provide the best possible project for both patients and doctors.</p>
+<p>Our vision is to use our model to provide doctors with the tools to do no harm by prescribing safe and healthy combinations of drugs, improving patient quality of life.<br />
+In order to make this vision a reality, we have established a close partnership with the Department of Clinical Pharmacology at the University Hospital Aachen in Germany.<br />
+This collaboration allows us to gather input from key medical stakeholders to deliver a practical, easy-to-use software that is able to empower the medical community from the get-go.<br />
+Through the network of RWTH Aachen, we would also be able to deploy our model in other German university hospitals and, ultimately, internationally.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Our team was deeply motivated to choose this project because of the personal experiences many of us have had with elderly family members, particularly our grandparents. Witnessing our grandparents taking a plethora of medications at once, with sometimes more than five just for breakfast, sparked a sense of concern and curiosity among us.<br />
+It made us question the safety and efficacy of such an approach and led us to investigate polypharmacy. Socially, polypharmacy affects the quality of life of a large section of the population. Over 80% of nursing home residents<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> and over 70% of hospitalized patients<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> are affected by polypharmacy.<br />
+This indicates that a significant proportion of the community is at risk of adverse drug reactions, impacting not just their health but also the well-being of their families. Seeing the gravity of the situation and the role polypharmacy plays in the lives of our loved ones, we came to the conclusion that we ought to focus our efforts on alleviating the problem.</p>
+<div class="admonition example">
+<p class="admonition-title">Trends in Polypharmacy</p>
+<p><figure markdown>
+    <a class="glightbox" href="../img/plot1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../img/plot1.png" width="600&quot;" /></a>
+<figcaption>Trends in polypharmacy among adults in the Netherlands 1999–2014, stratified by age.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></figcaption>
+</figure></p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Van Wilder L, Devleesschauwer B, Clays E, Pype P, Vandepitte S, De Smedt D. Polypharmacy and Health-Related Quality of Life/Psychological Distress Among Patients With Chronic Disease. Prev Chronic Dis 2022;19:220062. <a href="http://dx.doi.org/10.5888/pcd19.220062">http://dx.doi.org/10.5888/pcd19.220062</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Lee, Georgie, et al. "The Patterns and Implications of Potentially Suboptimal Medicine Regimens among Older Adults: a Narrative Review." Therapeutic Advances in Drug Safety, 2022, <a href="https://doi.org/10.1177/20420986221100117">https://doi.org/10.1177/20420986221100117</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Kantor ED, Rehm CD, Haas JS, Chan AT, Giovannucci EL. Trends in Prescription Drug Use Among Adults in the United States From 1999-2012. <a href="https://doi.org/10.1001/jama.2015.13766">https://doi.org/10.1001/jama.2015.13766</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Calcaterra, Laura, et al. "Predictors of Drug Prescription in Nursing Home Residents: Results from the INCUR Study." Internal and Emergency Medicine, vol. 17, no. 1, 2022, pp. 165-171,  <a href="https://doi.org/10.1007/s11739-021-02841-6">https://doi.org/10.1007/s11739-021-02841-6</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Trumic, Edisa, et al. "Prevalence of Polypharmacy and Drug Interaction Among Hospitalized Patients: Opportunities and Responsabilities in Pharmaceutical Care." Materia Socio-Medica, vol. 24, no. 2, 2012, pp. 68-72,  <a href="https://doi.org/10.5455/msm.2012.24.68-72">https://doi.org/10.5455/msm.2012.24.68-72</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Oktora, Monika, et al. "Trends in Polypharmacy and Dispensed Drugs among Adults in the Netherlands as Compared to the United States." PLOS ONE, vol. 14, no. 3, 2019, p. e0214240,  <a href="https://doi.org/10.1371/journal.pone.0214240">https://doi.org/10.1371/journal.pone.0214240</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1020,6 +971,7 @@ We aim to improve every aspect mentioned above and integrate the work that has p
   
     <div class="md-copyright__highlight">
       Made with <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#990000}</style><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg> by the <a href="https://bmsl.org" style="text-decoration: underline; onmouseover="color=LightGray";>Bioinformatics Munich Student Lab</a>. &emsp; Copyright &copy; 2023 iGEM Munich – <a href="#__consent">Change cookie settings</a>
+
     </div>
   
   
@@ -1144,5 +1096,5 @@ We aim to improve every aspect mentioned above and integrate the work that has p
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
