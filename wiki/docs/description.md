@@ -5,7 +5,7 @@
 A patient is described as undergoing polypharmacy if they simultaneously take more than five medications.
 While often necessary for treating multimorbid or vulnerable patients, polypharmacy is associated with various risks such as adverse drug interactions, increased incidence, and severity of side effects, poor compliance, and decline in the patient's quality of life[^1].\
 Polypharmacy presents a distinct and frequently non-linear side effect profile that is, in many cases, still poorly understood.\
-Polypharmacy affects 15% of the general population in the U.S. and about 10-20% in different European countries, with the incidence of polypharmacy rising sharply with age and poor health; in care settings, polypharmacy incidences above 50% are not uncommon[^2]<sup>,</sup>[^3].\
+Polypharmacy affects 15% of the general population in the U.S. and about 10-20% in different European countries, with the incidence of polypharmacy rising sharply with age and poor health; in care settings, polypharmacy incidences above 50% are not uncommon[^2]^,^[^3].\
 Globally, polypharmacy affects hundreds of millions of people, a trend that is rising as the global population ages.
 
 Because the number of possible combinations of different drugs increases exponentially with the number of drugs a patient is taking, systematic laboratory testing of every possible combination of drugs for unwanted side effects is not practical.\
