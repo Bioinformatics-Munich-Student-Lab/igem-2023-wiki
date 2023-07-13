@@ -56,9 +56,9 @@ def sitemapgz():
     return render_template('sitemap.xml')
 
 
-@app.route('/<page>/')
-def pages(page):
-    return render_template(str(Path(page)) + '/index.html')
+# @app.route('/<page>/')
+# def pages(page):
+#     return render_template(str(Path(page)) + '/index.html')
 
 
 @app.errorhandler(404)
