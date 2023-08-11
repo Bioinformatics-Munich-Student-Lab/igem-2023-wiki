@@ -8,7 +8,9 @@ Make sure the site builds using flask freeze before merging/committing to main!
 
 ---
 Old stuff
+
 ---
+
 # Team MunichBioinformatics 2023 Wiki
 
 This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
