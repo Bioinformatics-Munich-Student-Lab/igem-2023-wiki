@@ -62,7 +62,7 @@ theme:
     - navigation.top
     - navigation.indexes
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - announce.dismiss
     - content.code.copy
   icon:
@@ -108,7 +108,9 @@ nav:
     - Software: software.md
     - Sustainable: sustainable.md
   - Generic Tool Name Page: tool.md
-  - Test: test.md
+  - Test:
+     - Test: test.md
+     - Test2: test_child.md
   - Contact: contact.md
 
 extra:
