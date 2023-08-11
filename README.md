@@ -6,6 +6,10 @@ Create named feature branches for each feature you implement.
 
 Make sure the site builds using flask freeze before merging/committing to main!
 
+The wiki/site folder contains the generated website.
+
+Techstack: Material for MKdocs
+
 ---
 Old stuff
 
