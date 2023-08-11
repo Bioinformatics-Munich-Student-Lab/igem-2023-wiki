@@ -4,7 +4,9 @@ Anything on the main branch on GitHub automatically propagates to the iGEM GitLa
 
 Create named feature branches for each feature you implement.
 
-Make sure the site builds using flask freeze before merging/committing to main!
+Use the included Makefile for venv installation. The dev packages are contained in pyproject.toml. The deploy packages are contained in dependencies.txt.
+
+Make sure the site builds using `mkdocs build` and `flask freeze` before merging/committing to main!
 
 The wiki/site folder contains the generated website.
 
