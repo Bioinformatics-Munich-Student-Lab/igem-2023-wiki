@@ -1,3 +1,22 @@
+# Instucions
+
+Anything on the main branch on GitHub automatically propagates to the iGEM GitLab repo!
+
+Create named feature branches for each feature you implement.
+
+Use the included Makefile for venv installation. The dev packages are contained in pyproject.toml. The deploy packages are contained in dependencies.txt.
+
+Make sure the site builds using `mkdocs build` and `flask freeze` before merging/committing to main!
+
+The wiki/site folder contains the generated website.
+
+Techstack: Material for MKdocs
+
+---
+Old stuff
+
+---
+
 # Team MunichBioinformatics 2023 Wiki
 
 This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
