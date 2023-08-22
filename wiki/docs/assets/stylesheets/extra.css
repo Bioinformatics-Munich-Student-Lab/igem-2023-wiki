@@ -1,0 +1,62 @@
+/* --------- Dark --------- */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #000018;
+    --md-primary-fg-color--light: #ff00dd;
+    --md-primary-fg-color--dark: #ff00dd;
+    --md-accent-fg-color: #7c4dff;
+    --md-default-bg-color: #000018;
+    --md-footer-bg-color--dark: #000018;
+    --md-typeset-a-color: #448bff !important;
+    --md-shadow-z1:  0px 0px 20px 3px #ff00dd50 !important;
+    /* --md-shadow-z2:  
+    --md-shadow-z3:  0px 0px 20px 2px #ff00dd38 !important; */
+
+    .md-typeset code {
+        background-color: #130b22;
+    }
+    
+    .highlight {
+        /* box-shadow: 0px 0px 20px 3px #ff00dd30 !important; */
+        box-shadow: var(--md-shadow-z1);
+        border-color: #ffffff !important;
+    }
+
+    .md-header {
+        /* backdrop-filter: brightness(20%); */
+        backdrop-filter: blur(7px);
+        background-color: unset !important;
+    }
+    
+    .md-tabs {
+        backdrop-filter: blur(7px);
+        background-color: unset !important;
+    }
+}
+
+/* --------- Bright --------- */
+/* [data-md-color-scheme="default"] {
+    --md-primary-fg-color: #000018;
+    --md-primary-fg-color--light: #ff00dd;
+    --md-primary-fg-color--dark: #ff00dd;
+    --md-default-bg-color: #ebeaee;
+    --md-footer-bg-color--dark: #0f0fff;
+    --md-footer-bg-color--dark: #000018;
+} */
+
+/* ---------- All ---------- */
+.md-typeset .admonition, .md-typeset details {
+    margin: 2rem 0 !important;
+}
+
+.md-main__inner {
+    margin-top: 0rem !important;
+}
+
+/* .md-tabs {
+    overflow: visible !important;
+} */
+
+/* .md-search__overlay {
+    backdrop-filter: blur(7px) !important;
+    background-color: unset !important;
+} */

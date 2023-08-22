@@ -1,4 +1,4 @@
-site_name: iGEM Munich Software Wiki 2023
+site_name: SEPIA
 site_url: https://2023.igem.wiki/munichbioinformatics/
 
 repo_name: 2023/munichbioinformatics
@@ -42,12 +42,12 @@ markdown_extensions:
   
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-  - assets/javascript/tablesort.js
-  - assets/javascript/glightbox.js
+  - assets/javascripts/tablesort.js
+  - assets/javascripts/glightbox.js
 
 extra_css:
-  - assets/css/extra.css
-  - assets/css/glightbox.css
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/glightbox.css
 
 theme:
   name: material
@@ -55,31 +55,38 @@ theme:
   favicon: assets/favicon.png
   custom_dir: overrides
   features:
+    - toc.follow
+    - toc.integrate
     - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.indexes
-    - toc.follow
-    # - toc.integrate
     - announce.dismiss
     - content.code.copy
+    # Premium features
+    - content.tooltips
   icon:
-    - repo: fontawesome/brands/gitlab
+    repo: fontawesome/brands/square-gitlab
   palette:
     - scheme: default
-      primary: blue grey
-      accent: blue
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - scheme: slate
-      primary: blue grey
-      accent: blue
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
+
+plugins:
+  glightbox: {}
+  search:
+      lang: en
+  # Premium features
+  privacy: {}
 
 nav:
   - Home: index.md
@@ -107,7 +114,6 @@ nav:
     - Plant: plant.md
     - Software: software.md
     - Sustainable: sustainable.md
-  - Generic Tool Name Page: tool.md
   - Test:
      - Test: test.md
      - Test2: test_child.md
@@ -136,7 +142,7 @@ extra:
       link: https://docker.com
       name: Docker
     - icon: fontawesome/solid/face-grin-tears
-      link: https://huggingface.co/
+      link: https://huggingface.co
       name: Hugging Face
     - icon: fontawesome/brands/instagram 
       link: https://instagram.com
@@ -146,10 +152,7 @@ extra:
       name: LinkedIn
 
 copyright: >
-  Made with <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#990000}</style><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg> by the <a href="https://bmsl.org" style="text-decoration: underline; onmouseover="color=LightGray";>Bioinformatics Munich Student Lab</a>. &emsp; Copyright &copy; 2023 iGEM Munich – <a href="#__consent">Change cookie settings</a>
-
-plugins:
-  - glightbox
-  # - privacy
-  - search:
-      lang: en
+  Logo here!!!!
+  Made with
+  <svg xmlns="http://www.w3.org/2000/svg" height="0.75em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#990000}</style><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg> by the <a href="https://bmsl.org" style="text-decoration: underline; onmouseover="color=LightGray";>
+  Bioinformatics Munich Student Lab</a>. &emsp; Copyright &copy; 2023 iGEM Munich – <a href="#__consent">Change cookie settings</a>

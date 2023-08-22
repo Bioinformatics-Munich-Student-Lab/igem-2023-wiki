@@ -1,0 +1,42 @@
+html {
+    scroll-behavior: smooth;
+}
+
+img.whitened {
+    filter: grayscale(100%) contrast(140%) brightness(140%);
+    height: 3.5rem;
+    margin-right: 3rem;
+    transition: 0.7s;
+}
+
+img.whitened:hover {
+    filter: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.separator-line {
+    /* height: 1px !important;
+    color: white !important; */
+    border-top: 1px solid white !important;
+    /* border-radius: 120% 120% 120% 120%; */
+    margin: auto;
+    max-width: 59.5rem;
+    /* border-top: 1px solid white; */
+    /* content: ''; */
+}
+
+.dropdowm-container {
+    overflow: hidden;
+}
+
+[dir=ltr] .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
+    border-left: 0.05rem solid var(--md-typeset-a-color);
+}

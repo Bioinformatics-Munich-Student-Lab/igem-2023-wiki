@@ -10,6 +10,8 @@ Make sure the site builds using `mkdocs build` and `flask freeze` before merging
 
 When editing the theme use `mkdocs serve --watch-theme` to autmatically propagate updates.
 
+`pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git`
+
 When insiders is enabled `mkdocs build --config-file mkdocs.insiders.yml` and `mkdocs serve --config-file mkdocs.insiders.yml --watch-theme`
 
 The wiki/site folder contains the generated website.
