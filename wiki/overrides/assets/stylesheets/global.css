@@ -33,10 +33,6 @@ img.whitened:hover {
     /* content: ''; */
 }
 
-.dropdowm-container {
-    overflow: hidden;
-}
-
 [dir=ltr] .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
     border-left: 0.05rem solid var(--md-typeset-a-color);
 }

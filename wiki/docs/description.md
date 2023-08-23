@@ -26,7 +26,8 @@ This indicates that a significant proportion of the community is at risk of adve
 
 !!! example "Trends in Polypharmacy"
     <figure markdown>
-        ![Image title](img/plot1.png){ width=600" }
+        ![Image title](img/plot1-dark.png#only-dark){ width=600" }
+        ![Image title](img/plot1-light.png#only-light){ width=600" }
     <figcaption>Trends in polypharmacy among adults in the Netherlands 1999–2014, stratified by age.[^6]</figcaption>
     </figure>
 

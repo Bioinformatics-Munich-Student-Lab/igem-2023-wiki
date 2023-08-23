@@ -62,6 +62,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sidebar
     - navigation.sections
     - navigation.top
     - navigation.indexes
@@ -87,6 +88,7 @@ plugins:
       lang: en
   # Premium features
   privacy: {}
+  typeset: {}
 
 nav:
   - Home: index.md

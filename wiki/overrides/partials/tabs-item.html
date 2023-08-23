@@ -40,29 +40,32 @@
 <!-- Render item -->
 {% else %}
 <li class="md-tabs__item">
-    <a href="{{ nav_item.url | url }}" class="{{ class }}">
-        {{ title }}
-        <ul class="dropdown">
-            <a href="#">Web Development</a>
-            <a href="#">Web Design</a>
-            <a href="#">Illustration</a>
-            <a href="#">Iconography</a>
-        </ul>
-        <!-- <div class="dropdown">
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
-        <br> -->
-        <!-- children -> dropdown on hover -->
-        <!-- repalce a with an arrow indicating dropdown -->
-        <!-- <ul class="md-nav__list" data-md-scrollfix>
-            {{nav_item.children}}
-        </ul> -->
-        <!-- code for dropdown should end here -->
-    </a>
+    <div class="dropdown">
+        <a href="{{ nav_item.url | url }}" class="{{ class }}">
+            {% include ".icons/" ~ "fontawesome/solid/angle-down" ~ ".svg" %} {{ title }}
+        </a>
+        <div class="dropdown-content">
+            <a href="#">Option 1</a>
+            <br>
+            <a href="#">Option 2</a>
+            <br>
+            <a href="#">Option 3</a>
+            <br>
+            <a href="#">Option 4</a>
+            <br>
+            <a href="#">Option 5</a>
+            <br>
+            <a href="#">Option 6</a>
+            <br>
+            <a href="#">Option 7</a>
+            <br>
+            <a href="#">Option 8</a>
+            <br>
+            <a href="#">Option 9</a>
+            <br>
+            <a href="#">Option 10</a>
+        </div>
+    </div>
 </li>
 {% endif %}
 
@@ -71,7 +74,6 @@
 <li class="md-tabs__item">
     <a href="{{ nav_item.url | url }}" class="{{ class }}">
         {{ nav_item.title }}
-        <!-- no children = NO dropdown on hover -->
     </a>
 </li>
 {% endif %}
