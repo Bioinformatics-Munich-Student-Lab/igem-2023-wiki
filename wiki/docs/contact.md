@@ -1,5 +1,5 @@
 # Contact
-Contact us :rofl:
+Contact us...
 ##  Bioinformatics Munich Student Lab
 Email: [bioinformaticsmunichstudentlab@gmail.com](mailto:bioinformaticsmunichstudentlab@gmail.com)
 

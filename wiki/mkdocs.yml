@@ -61,7 +61,7 @@ theme:
     - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.sidebar
     - navigation.sections
     - navigation.top
@@ -70,6 +70,7 @@ theme:
     - content.code.copy
     # Premium features
     - content.tooltips
+    - navigation.path
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:
@@ -87,7 +88,9 @@ plugins:
   search:
       lang: en
   # Premium features
-  privacy: {}
+  privacy:
+    links_attr_map:
+        target: _blank
   typeset: {}
 
 nav:
@@ -117,8 +120,11 @@ nav:
     - Software: software.md
     - Sustainable: sustainable.md
   - Test:
-     - Test: test.md
-     - Test2: test_child.md
+      - Test Upper: test_upper.md
+      - Test: test.md
+      - Test2: test_child.md
+      # - Inner:
+      - Inner: description_alt.md
   - Contact: contact.md
 
 extra:

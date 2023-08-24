@@ -23,9 +23,11 @@
 
     .md-header {
         /* backdrop-filter: brightness(20%); */
-        -webkit-backdrop-filter: blur(7px);
-        backdrop-filter: blur(7px);
+        /* -webkit-backdrop-filter: blur(7px); */
+        /* backdrop-filter: blur(7px); */
+        mask: linear-gradient(black, black 120%);
         background-color: unset !important;
+        /* background: linear-gradient(#00001800 0%, #e1171700 100%); */
     }
 
     .md-tabs {
@@ -33,6 +35,30 @@
         backdrop-filter: blur(7px);
         background-color: unset !important;
         overflow: visible !important;
+    }
+
+    .md-header--shadow {
+        box-shadow: none !important;
+        /* backdrop-filter: blur(10px);
+        mask: linear-gradient(transparent, black 60%); */
+    }
+
+    /* .header-container {
+        margin: auto;
+        max-width: 63rem;
+        backdrop-filter: blur(7px);
+        background-color: #5447762a;
+        border-radius: 0.7rem;
+        border-width: 0.5px;
+        border-top-color: #ffffff40;
+        border-bottom-color: #49494940;
+        border-left-color: #8f8f8f40;
+        border-right-color: #8f8f8f40;
+        border-style: solid;
+        margin-top: 0.5rem;
+    } */
+    .header-container {
+        backdrop-filter: blur(7px);
     }
 }
 

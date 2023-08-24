@@ -20,20 +20,36 @@
   IN THE SOFTWARE.
 -->
 
-{% extends "base.html" %}
+<!-- Determine title -->
+{% set title = lang.t("toc") %}
+{% if config.mdx_configs.toc and config.mdx_configs.toc.title %}
+  {% set title = config.mdx_configs.toc.title %}
+{% endif %}
 
-{% block styles %}
-{{ super() }}
-<!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
-<link rel="stylesheet" href="{{ 'assets/stylesheets/global.css' | url }}" />
-<link rel="stylesheet" href="{{ 'assets/stylesheets/dropdown.css' | url }}" />
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="{{ title }}">
+  {% set toc = page.toc %}
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+  {% set first = toc | first %}
+  {% if first and first.level == 1 %}
+    {% set toc = first.children %}
+  {% endif %}
 
-{% endblock %}
-
-{% block scripts %}
-<!-- Add scripts that need to run before above -->
-{{ super() }}
-<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.427/build/spline-viewer.js"></script>
-<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.427/build/process.js"></script>
-<!-- Add scripts that need to run afterwards below -->
-{% endblock %}
+  <!-- Table of contents title and list -->
+  {% if toc %}
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      {{ title }}
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      {% for toc_item in toc %}
+        {% include "partials/toc-item.html" %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

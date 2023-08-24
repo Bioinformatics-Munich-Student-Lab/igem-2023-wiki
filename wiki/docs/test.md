@@ -1,11 +1,18 @@
----
-# template: custom/entry.html
-# hero: /munichbioinformatics/img/plot1.png
+<!-- ---
+template: custom/entry.html
+hero: /munichbioinformatics/img/plot1.png
 subtitle: this is a subtitle
----
+--- -->
 # Test page
 
 page for testing[^1]
+
+## Test  Structure
+this is the structure test
+### ABC
+ABC some content
+### DEF
+DEF some content
 
 ## Hover
 
@@ -175,6 +182,42 @@ content
 content\
 content\
 content
+
+## TitleD
+
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+
+## TitleE
+
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
+content\
 
 ## References
 
