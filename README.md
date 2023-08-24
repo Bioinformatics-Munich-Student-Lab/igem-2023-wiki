@@ -1,4 +1,4 @@
-# Instucions
+# Instructions
 
 Anything on the main branch on GitHub automatically propagates to the iGEM GitLab repo!
 
