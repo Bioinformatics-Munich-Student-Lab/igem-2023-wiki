@@ -2431,8 +2431,8 @@
     closeOnOutsideClick: true,
     plugins: false,
     plyr: {
-      css: '../external/cdn.plyr.io/3.6.12/plyr.css',
-      js: 'https://2023.igem.wiki/munichbioinformatics/assets/external/cdn.plyr.io/3.6.12/plyr.js',
+      css: 'https://cdn.plyr.io/3.6.12/plyr.css',
+      js: 'https://cdn.plyr.io/3.6.12/plyr.js',
       config: {
         ratio: '16:9',
         fullscreen: {

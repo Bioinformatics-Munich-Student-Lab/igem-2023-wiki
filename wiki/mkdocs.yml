@@ -88,9 +88,9 @@ plugins:
   search:
       lang: en
   # Premium features
-  privacy:
-    links_attr_map:
-        target: _blank
+  # privacy:
+  #   links_attr_map:
+  #       target: _blank
   typeset: {}
 
 nav:
