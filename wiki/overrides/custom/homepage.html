@@ -1,39 +1,19 @@
 {% extends "main.html" %}
 
 {% block htmltitle %}
-  <title>{{ config.site_name }}</title>
+  <title>{{ config.site_name }} - Homepage</title>
 {% endblock %}
 
-
-<h1>Home Menu Bar</h1>
-<p> Welcome to sepia!</p>
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+{% endblock %}
 
 {% block hero %}
-{% include "partials/hero.html" %}
+    {% include "custom/partials/custom_homepage.html" %}
+    <!-- {% include "custom/partials/custom_homepage.html" %} -->
 {% endblock %}
 
-<!-- Theme-related style sheets -->
-{% block styles %}
-  {{ super() }}
-
-  <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
-
-  <!-- Hack: detect Safari, so we can hack around problems with containment -->
-  <script>
-    if (navigator.vendor === "Apple Computer, Inc.")
-      document.documentElement.classList.add("safari")
-  </script>
-{% endblock %}
-
-<!-- Remove Announcement bar -->
-{% block announce %}{% endblock %}
-
-<!-- Remove Navigation tabs (collapsing) -->
 {% block tabs %}{% endblock %}
 
-<!-- Remove Page content -->
 {% block content %}{% endblock %}
-
-<!-- Remove Application footer -->
-{% block footer %}{% endblock %}

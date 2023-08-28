@@ -33,7 +33,7 @@
 {% block scripts %}
 <!-- Add scripts that need to run before above -->
 {{ super() }}
+<!-- Add scripts that need to run afterwards below -->
 <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.427/build/spline-viewer.js"></script>
 <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.427/build/process.js"></script>
-<!-- Add scripts that need to run afterwards below -->
 {% endblock %}
