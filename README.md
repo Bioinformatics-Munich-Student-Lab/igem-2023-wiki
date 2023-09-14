@@ -20,7 +20,7 @@ When insiders is enabled `mkdocs build --config-file mkdocs.insiders.yml` and `m
 
 The wiki/site folder contains the generated website.
 
-Techstack: Material for MKdocs
+Techstack: Material for MKdocs, Spline
 
 ---
 Old stuff
