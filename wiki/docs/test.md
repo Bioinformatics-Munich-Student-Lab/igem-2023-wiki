@@ -1,8 +1,16 @@
-<!-- ---
-template: custom/entry.html
-hero: /munichbioinformatics/img/plot1.png
+---
+template: custom/contentpage.html
+# status: new
+title: Lorem ipsum dolor sit amet
+description: Nullam urna elit, malesuada eget finibus ut, ac tortor.  
 subtitle: this is a subtitle
---- -->
+hero_text: asdf
+hero_image1: /munichbioinformatics/img/plot1.png
+hero_image2: /munichbioinformatics/img/plot1.png
+hero_image3: /munichbioinformatics/img/plot1.png
+hero_image4: /munichbioinformatics/img/plot1.png
+---
+
 # Test page
 
 page for testing[^1]

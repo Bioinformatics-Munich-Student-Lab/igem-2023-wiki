@@ -7,32 +7,27 @@
     --md-default-bg-color: #000018;
     --md-footer-bg-color--dark: #000018;
     --md-typeset-a-color: #448bff !important;
-    --md-shadow-z1: 0px 0px 20px 3px #ff00dd50 !important;
+    --md-shadow-z1: 0px 0px 30px 2px #000000 !important;
+    /* --md-admonition-bg-color: #1a143d; */
     /* --md-shadow-z2:  
     --md-shadow-z3:  0px 0px 20px 2px #ff00dd38 !important; */
 
     .md-typeset code {
-        background-color: #130b22;
+        background-color: #1a143d;
     }
 
+    /* Code Box */
     .highlight {
-        /* box-shadow: 0px 0px 20px 3px #ff00dd30 !important; */
         box-shadow: var(--md-shadow-z1);
         border-color: #ffffff !important;
     }
 
     .md-header {
-        /* backdrop-filter: brightness(20%); */
-        /* -webkit-backdrop-filter: blur(7px); */
-        /* backdrop-filter: blur(7px); */
         mask: linear-gradient(black, black 120%);
         background-color: unset !important;
-        /* background: linear-gradient(#00001800 0%, #e1171700 100%); */
     }
 
     .md-tabs {
-        -webkit-backdrop-filter: blur(7px);
-        backdrop-filter: blur(7px);
         background-color: unset !important;
         overflow: visible !important;
     }
@@ -43,11 +38,12 @@
         mask: linear-gradient(transparent, black 60%); */
     }
 
-    /* .header-container {
+    /* --------- Alternative Header --------- */
+    .header-container {
         margin: auto;
         max-width: 63rem;
         backdrop-filter: blur(7px);
-        background-color: #5447762a;
+        background-color: #00001850;
         border-radius: 0.7rem;
         border-width: 0.5px;
         border-top-color: #ffffff40;
@@ -56,26 +52,20 @@
         border-right-color: #8f8f8f40;
         border-style: solid;
         margin-top: 0.5rem;
-    } */
-    .header-container {
-        backdrop-filter: blur(7px);
     }
-}
 
-/* --------- Bright --------- */
-/* [data-md-color-scheme="default"] {
-    --md-primary-fg-color: #000018;
-    --md-primary-fg-color--light: #ff00dd;
-    --md-primary-fg-color--dark: #ff00dd;
-    --md-default-bg-color: #ebeaee;
-    --md-footer-bg-color--dark: #0f0fff;
-    --md-footer-bg-color--dark: #000018;
-} */
+    /* --------- Main Header --------- */
+    /* .header-container {
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        background-color: #00001850;
+    } */
+}
 
 /* ---------- All ---------- */
 .md-typeset .admonition,
 .md-typeset details {
-    margin: 2rem 0 !important;
+    /* margin: 2rem 0 !important; */
 }
 
 .md-main__inner {
@@ -96,6 +86,16 @@
     height: 59rem;
 }
 
-/* .vignette {
-  box-shadow: inset 3px 3px 10px 0 #000000;
-} */
+.md-search__form {
+    border-radius: 0.7rem;
+    background-color: #523e8d52;
+}
+
+[dir=ltr] .md-search__output, [dir=rtl] .md-search__output {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+[data-md-toggle=search]:checked~.md-header .md-search__form {
+    border-radius: 0.5rem 0.5rem 0 0;
+
+}
