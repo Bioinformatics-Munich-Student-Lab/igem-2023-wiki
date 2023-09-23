@@ -43,3 +43,8 @@ img.whitened:hover {
     /* backdrop-filter: blur(7px) !important; */
     /* background-color: unset !important; */
 }
+
+.md-search__overlay {
+    background-color: #00000000;
+    opacity: 0;
+}

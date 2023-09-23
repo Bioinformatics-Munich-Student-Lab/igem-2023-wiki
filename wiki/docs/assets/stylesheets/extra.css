@@ -92,10 +92,10 @@
 }
 
 [dir=ltr] .md-search__output, [dir=rtl] .md-search__output {
-    border-radius: 0 0 0.5rem 0.5rem;
+    border-radius: 0 0 0.7rem 0.7rem;
 }
 
 [data-md-toggle=search]:checked~.md-header .md-search__form {
-    border-radius: 0.5rem 0.5rem 0 0;
+    border-radius: 0.7rem 0.7rem 0 0;
 
 }
