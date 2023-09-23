@@ -6,23 +6,30 @@
     overflow: visible !important;
     display: none;
     position: absolute;
-    /* min-width: 160px; */
     z-index: 1;
-    background-color: rgb(196, 111, 0);
 }
 
 .dropdown:hover .dropdown-container {
-    position: absolute;
     transition: 2s;
     display: block;
 }
 
 .dropdown-content {
-    margin-top: 1.5rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    margin-bottom: 0.3rem;
-    background-color: #010101;
+    padding: 0.5rem;
+    margin-top: 10px;
+
+    border-radius: 0.7rem;
+    background-color: #00001850;
+    border-width: 0.5px;
+    border-top-color: #ffffff40;
+    border-bottom-color: #49494940;
+    border-left-color: #8f8f8f40;
+    border-right-color: #8f8f8f40;
+    border-style: solid;
+
+    position: relative;
+    z-index: 4;
+    backdrop-filter: blur(7px);
 }
 
 .md-tabs__list {

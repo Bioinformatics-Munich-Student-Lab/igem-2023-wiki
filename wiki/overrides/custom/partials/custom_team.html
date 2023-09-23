@@ -1,1 +1,12 @@
-team page
+{% set id = ("team_member_" + (range(100000) | random | string)) %}
+<div class="team-member">
+    <input type="radio" id="{{ id }}" name="team-member" style="display: none">
+    <label class="md-typeset" for="{{ id }}">
+        <a class="md-author team-member-image">
+            <img src="{{ 'assets/images/placeholder.png' | url }}" style="">
+        </a>
+    </label>
+    <div class="team-member-description">
+        {{ name }}
+    </div>
+</div>
