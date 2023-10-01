@@ -60,8 +60,8 @@ theme:
   features:
     - toc.follow
     - toc.integrate
-    - navigation.instant
-    - navigation.instant.prefetch
+    # - navigation.instant
+    # - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
