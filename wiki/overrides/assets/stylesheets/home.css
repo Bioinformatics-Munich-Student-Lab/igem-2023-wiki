@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it's above other content */
+    z-index: 9999;
 }
 
 .loader {
@@ -23,8 +23,4 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.content {
-    /* Add your styles for the content here */
 }
