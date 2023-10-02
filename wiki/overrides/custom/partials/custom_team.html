@@ -1,12 +1,17 @@
-{% set id = ("team_member_" + (range(100000) | random | string)) %}
-<div class="team-member">
-    <input type="radio" id="{{ id }}" name="team-member" style="display: none">
-    <label class="md-typeset" for="{{ id }}">
-        <a class="md-author team-member-image">
-            <img src="{{ 'assets/images/placeholder.png' | url }}" style="">
-        </a>
-    </label>
-    <div class="team-member-description">
-        {{ name }}
+<div class="team-member md-typeset">
+    <a class="glightbox md-author team-member-image"
+       data-glightbox="moreLength: 0; title: {{ name | capitalize }}; description: .custom-desc-{{ name }}">
+        <img src="{{ ('assets/images/team/' + name + '.jpg') | url }}">
+    </a>
+    <div class="glightbox-desc custom-desc-{{ name }}">
+        <div class="team-member-fullscreen">
+            <div class="team-member-image-full">
+                <img src="{{ ('assets/images/team/' + name + '.jpg') | url }}">
+            </div>
+            <div class="team-member-description">
+                {% include 'assets/images/team/' + name + '.html' %}
+            </div>
+        </div>
     </div>
 </div>
+
