@@ -40,6 +40,8 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
 .gradient_Headline_start {
     font-size: 100px;
     margin-bottom: 0px;
