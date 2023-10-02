@@ -73,7 +73,7 @@ theme:
     - content.code.copy
     # Premium features
     - content.tooltips
-    - navigation.path
+    # - navigation.path
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:

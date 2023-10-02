@@ -5,7 +5,8 @@ html {
 img.whitened {
     filter: grayscale(100%) contrast(140%) brightness(140%);
     height: 3.5rem;
-    margin-right: 3rem;
+    margin-bottom: 1rem;
+    /* margin-right: 3rem; */
     transition: 0.7s;
 }
 

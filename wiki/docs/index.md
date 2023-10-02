@@ -1,4 +1,4 @@
 ---
-template: custom/homepage.html
+template: custom/homepage_alt.html
 ---
 Default homepage

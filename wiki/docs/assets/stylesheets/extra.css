@@ -99,3 +99,8 @@
     border-radius: 0.7rem 0.7rem 0 0;
 
 }
+
+.md-source__repository {
+    text-overflow: unset !important;
+    overflow: unset !important;
+}
