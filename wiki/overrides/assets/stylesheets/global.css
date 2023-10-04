@@ -23,6 +23,16 @@ img.whitened:hover {
     width: 100%;
 }
 
+/* .header-container::before {
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+} */
+
+/* .blur-bg {
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+} */
+
 .separator-line {
     /* height: 1px !important;
     color: white !important; */
@@ -47,4 +57,12 @@ img.whitened:hover {
 .md-search__overlay {
     background-color: #00000000;
     opacity: 0;
+}
+
+.md-typeset .md-button {
+    border-radius: 0.7rem;
+}
+
+.md-source__repository {
+    max-width: 100%;
 }
