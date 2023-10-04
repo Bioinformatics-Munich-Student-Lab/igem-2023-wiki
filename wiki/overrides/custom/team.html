@@ -25,9 +25,13 @@
             {% include "custom/partials/custom_team.html" %}
         {% endwith %}
     </div>
-{% endblock %}
-
-{% block site_nav %}
+    <style>
+        @media screen and (min-width: 76.1875em) {
+            main {
+               display: none;
+            }
+        }
+    </style>
 {% endblock %}
 
 {% block container %}
