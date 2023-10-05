@@ -78,10 +78,10 @@ theme:
     repo: fontawesome/brands/square-gitlab
   palette:
     - scheme: slate
-    #   toggle:
+      # toggle:
     #     icon: material/toggle-switch-off-outline
     #     name: Switch to light mode
-    # - scheme: default
+    - scheme: default
     #   toggle:
     #     icon: material/toggle-switch
     #     name: Switch to dark mode
