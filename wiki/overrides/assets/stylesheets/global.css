@@ -47,6 +47,7 @@ img.whitened:hover {
 [dir=ltr] .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
     border-left: 0.05rem solid var(--md-typeset-a-color);
 }
+
 [data-md-toggle=search]:checked~.md-header .md-search__overlay {
     /* background-color: #a406c039 !important;
     filter: blur(5px); */
