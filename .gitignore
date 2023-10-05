@@ -15,3 +15,5 @@ public
 mkdocs-material-insiders-master
 
 .cache
+/.cache/
+**/.cache/
