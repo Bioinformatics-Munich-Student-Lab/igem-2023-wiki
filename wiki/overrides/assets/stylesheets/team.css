@@ -1,8 +1,3 @@
-.md-typeset .team-member-image {
-    width: 10rem;
-    height: auto;
-}
-
 .team-members {
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -10,24 +5,22 @@
     flex-direction: row;
 }
 
-.team-member {
-    margin: 2rem;
-    min-height: 2.4rem;
-}
-
-team-member-image:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-team-member-image:hover img {
-    filter: none;
+.team-member-image {
+    width: 10rem !important;
+    height: auto !important;
+    color: white !important;
+    cursor: pointer;
+    text-align: center;
 }
 
 .team-member-image img {
     object-fit: cover;
     aspect-ratio: 1;
-    filter: grayscale(100%);
+}
+
+.team-member {
+    margin: 2rem;
+    min-height: 2.4rem;
 }
 
 .team-member-image-full {

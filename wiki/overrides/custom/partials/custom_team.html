@@ -2,6 +2,9 @@
     <a class="glightbox md-author team-member-image"
        data-glightbox="moreLength: 0; title: {{ name | capitalize }}; description: .custom-desc-{{ name }}">
         <img src="{{ ('assets/images/team/' + name + '.jpg') | url }}">
+        <div>
+            {{ name | capitalize }}
+        </div>
     </a>
     <div class="glightbox-desc custom-desc-{{ name }}">
         <div class="team-member-fullscreen">
