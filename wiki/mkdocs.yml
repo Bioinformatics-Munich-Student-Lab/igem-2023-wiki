@@ -17,6 +17,7 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.keys
   - pymdownx.smartsymbols
+  - neoteroi.timeline
   - pymdownx.escapeall:
       hardbreak: true
   -  pymdownx.emoji:
@@ -48,11 +49,12 @@ extra_javascript:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/glightbox.css
+  - assets/stylesheets/neoteroi.css
 
 theme:
   name: material
   logo: https://static.igem.wiki/teams/5016/wiki/logo-icons/pilly.svg
-  favicon: assets/favicon.png
+  favicon: https://static.igem.wiki/teams/5016/wiki/logo-icons/logo-icons/favicon.png
   custom_dir: overrides
   font:
     text: Montserrat
@@ -73,7 +75,7 @@ theme:
     - content.code.copy
     # Premium features
     - content.tooltips
-    - navigation.path
+    # - navigation.path
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:
@@ -129,7 +131,7 @@ nav:
       # - Inner:
       - Inner: description_alt.md
       - Content Template Test: content_template_test.md
-  - Contact: contact.md
+  # - Contact: contact.md
 
 extra:
   generator: false
