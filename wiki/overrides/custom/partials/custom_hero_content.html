@@ -3,7 +3,7 @@
     {% for i in range(4) %}
         <img src="{{ page.meta['hero_image' + ((i+1)|string)] | url}}" class="hero_image"/>
     {% endfor %}
-    <h1 class="glass-backdrop">{{ page.meta.hero_text }}</h1>
+    <h1>{{ page.meta.hero_text }}</h1>
 </div>
 <script src="{{ 'assets/javascripts/simpleParallax.min.js' | url }}" ></script>
 <script>
@@ -18,8 +18,3 @@
         rate += 0.5;
     }
 </script>
-<style>
-    header {
-        height: 0;
-    }
-</style>
