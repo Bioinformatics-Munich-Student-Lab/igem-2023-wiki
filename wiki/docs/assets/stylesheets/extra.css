@@ -122,5 +122,10 @@
 }
 
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
-    height: 2rem;
+    height: 2.2rem;
 }
+
+/* body > header > div > div > nav.md-header__inner.md-grid > a {
+    margin: 0.2rem 0rem 0rem 0.2rem !important;
+    padding: 0.4rem 0rem 0rem 0.4rem !important;
+} */
