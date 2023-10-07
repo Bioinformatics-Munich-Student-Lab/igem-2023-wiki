@@ -16,3 +16,8 @@
 {% block tabs %}{% endblock %}
 
 {% block content %}{% endblock %}
+
+{% block scripts %}
+<script src="assets/script/loading.js"></script>
+{{ super() }}
+{% endblock scripts %}

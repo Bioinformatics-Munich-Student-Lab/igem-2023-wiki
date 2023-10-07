@@ -51,7 +51,7 @@ extra_css:
 
 theme:
   name: material
-  logo: assets/logo.svg
+  logo: https://static.igem.wiki/teams/5016/wiki/logo-icons/pilly.svg
   favicon: assets/favicon.png
   custom_dir: overrides
   font:
@@ -60,8 +60,8 @@ theme:
   features:
     - toc.follow
     - toc.integrate
-    - navigation.instant
-    - navigation.instant.prefetch
+    # - navigation.instant
+    # - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -77,14 +77,14 @@ theme:
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
     - scheme: slate
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+      # toggle:
+    #     icon: material/toggle-switch-off-outline
+    #     name: Switch to light mode
+    - scheme: slate
+    #   toggle:
+    #     icon: material/toggle-switch
+    #     name: Switch to dark mode
 
 plugins:
   glightbox: {}
@@ -145,10 +145,10 @@ extra:
       - reject
   social:
     - icon: fontawesome/brands/github 
-      link: https://github.com
+      link: https://github.com/Bioinformatics-Munich-Student-Lab
       name: GitHub
     - icon: fontawesome/brands/gitlab 
-      link: https://gitlab.com
+      link: https://gitlab.igem.org/2023/software-tools/munichbioinformatics
       name: GitLab
     - icon: fontawesome/brands/docker 
       link: https://docker.com
@@ -160,8 +160,18 @@ extra:
       link: https://instagram.com
       name: Instagram
     - icon: fontawesome/brands/linkedin 
-      link: https://linkedin.com
+      link: https://www.linkedin.com/company/81540003/admin/feed/posts/
       name: LinkedIn
+  consent:
+    title: Cookie consent and Google Chrome Based Browser
+    description: >- 
+      This site is optimized for Google Chrome or other Chromium based based browsers. <b>Some features may not work with other browsers.</b>
+      <br>
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
 
 copyright: >
   &copy; 2023 –
