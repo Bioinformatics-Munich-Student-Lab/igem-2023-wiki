@@ -7,6 +7,12 @@ One of our notable achievements is the absence of data leaks, thanks to our resp
 Ensuring patient safety was a top priority for our team. We performed thorough testing and validation to check the accuracy and reliability of our AI models.\
 This included running different scenarios, gathering data, and closely examining our models. Our goal was to reduce the chances of mistakes or incorrect prediction that could harm patients.
 
+!!! example ""
+    <figure markdown >
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/testing-data-of-our-model.png){ width="450"}
+        
+    <figcaption>distribution of our Training, Validation and Test Data</figcaption>
+    </figure>
 Recognizing the potential impact of our project emphasized the importance of extensive testing and validation.\
 We understood that our AI models will be used in real-world healthcare settings, where they will influence important medical decisions.\ Any mistakes or weaknesses in our models could seriously affect patient well-being.
 
