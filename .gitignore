@@ -13,3 +13,8 @@ public
 .vscode
 /mkdocs-material-insiders/
 mkdocs-material-insiders-master
+
+.cache
+/.cache/
+**/.cache/
+site

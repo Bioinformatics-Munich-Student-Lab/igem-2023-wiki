@@ -1,8 +1,8 @@
 /* --------- Dark --------- */
 [data-md-color-scheme="slate"] {
-    --md-primary-fg-color: #000018;
-    --md-primary-fg-color--light: #ff00dd;
-    --md-primary-fg-color--dark: #ff00dd;
+    --md-primary-fg-color: #7c4dff;
+    --md-primary-fg-color--light: #7c4dff;
+    --md-primary-fg-color--dark: #7c4dff;
     --md-accent-fg-color: #7c4dff;
     --md-default-bg-color: #000018;
     --md-footer-bg-color--dark: #000018;
@@ -39,19 +39,40 @@
     }
 
     /* --------- Alternative Header --------- */
-    .header-container {
-        margin: auto;
-        max-width: 63rem;
+    .blur-container::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 0.5rem);
+        -webkit-backdrop-filter: blur(7px);
         backdrop-filter: blur(7px);
-        background-color: #00001850;
+        z-index: -1;
+        max-width: 63rem;
         border-radius: 0.7rem;
-        border-width: 0.5px;
+    }
+
+    .blur-container {
+        max-width: 63rem;
+        margin: auto;
+        border-radius: 0.7rem;
+    }
+    
+    .header-container {
+        border-radius: 0.7rem;
+        border-width: 0.7px;
         border-top-color: #ffffff40;
         border-bottom-color: #49494940;
         border-left-color: #8f8f8f40;
         border-right-color: #8f8f8f40;
         border-style: solid;
+        content: ''; 
+        margin: auto;
+        max-width: 63rem;
+        background-color: #00001850;
         margin-top: 0.5rem;
+        overflow: visible !important;
+        /* backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px); */
     }
 
     /* --------- Main Header --------- */
@@ -99,3 +120,12 @@
     border-radius: 0.7rem 0.7rem 0 0;
 
 }
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 2.2rem;
+}
+
+/* body > header > div > div > nav.md-header__inner.md-grid > a {
+    margin: 0.2rem 0rem 0rem 0.2rem !important;
+    padding: 0.4rem 0rem 0rem 0.4rem !important;
+} */

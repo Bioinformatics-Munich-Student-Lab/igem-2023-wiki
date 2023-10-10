@@ -10,6 +10,7 @@ python = "^3.11"
 Frozen-Flask = "^0.18"
 mkdocs-material = "^9.1.17"
 mkdocs-glightbox = "^0.3.4"
+neoteroi-mkdocs = "^1.0.4"
 
 
 [build-system]
