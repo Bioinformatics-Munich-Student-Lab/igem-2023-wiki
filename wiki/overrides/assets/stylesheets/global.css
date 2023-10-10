@@ -71,3 +71,37 @@ img.whitened:hover {
 .md-footer-meta {
     background-color: #000;
 }
+
+.md-typeset h1 {
+    color: #fff;
+}
+
+.md-typeset h2 {
+    color: #fff;
+}
+
+/* Timeline */
+
+.nt-timeline .nt-timeline-content {
+    border-bottom: 0px solid #ffffff !important;
+}
+
+.timeline-education .nt-timeline-dot {
+    background-color: #48D1CC !important;
+}
+
+.timeline-entrepreneurship .nt-timeline-dot {
+    background-color: #800000 !important;
+}
+
+.timeline-outreach .nt-timeline-dot {
+    background-color: #40ff00 !important;
+}
+
+.timeline-project .nt-timeline-dot {
+    background-color: #9000ff !important;
+}
+
+.timeline-organizational .nt-timeline-dot {
+    background-color: #FFA500 !important;
+}
