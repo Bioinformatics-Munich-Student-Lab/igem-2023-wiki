@@ -1,15 +1,18 @@
 <!-- this is a custom hero -->
 <div class="hero-container">
     {% for i in range(4) %}
-        <img src="{{ page.meta['hero_image' + ((i+1)|string)] | url}}" class="hero_image"/>
+        {% if ('hero_image' + (i+1)|string) in page.meta %}
+            <img src="{{ page.meta['hero_image' + ((i+1)|string)] | url}}" class="hero_image"/>
+        {% endif %}}
     {% endfor %}
     <h1>{{ page.meta.hero_text }}</h1>
 </div>
-<script src="{{ 'assets/javascripts/simpleParallax.min.js' | url }}" ></script>
+<script src="{{ 'assets/javascripts/simpleParallax.min.js' | url }}"></script>
 <script>
-    const hero_images = document.getElementsByClassName('hero_image');
+    const hero_images = Array.from(document.getElementsByClassName('hero_image')).reverse();
     let rate = 1;
     for(let hero_image of hero_images) {
+        hero_image
         new simpleParallax(hero_image, {
             orientation: 'up',
             scale: rate,
