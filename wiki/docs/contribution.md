@@ -18,6 +18,18 @@ Our first task was to find enough data to be able to properly train our model wh
 | `Collaboration with Healthcare Providers`| hospitals, clinics, or healthcare institutions are able to provide de-identified patient data. To do this, you have to keep privacy regulations like HIPAA in the United States in mind|
 
 ## How to use our Model 
+#### how our UI is build up 
+Our UI can be split into three parts: the search bar, the list of drugs, and the list of polypharmacy.
+In the middle of the screen is our search bar, which can be used to search for and add a drug. This can be done multiple times to add multiple drugs. On the left side of the screen is the list of drugs, which displays every drug that has been added through the search bar. Each listed drug has a delete button to remove it from the calculation. On the right side are listed polypharmacies that are likely to occur because of the added drugs. Each polypharmacy has a displayed score, indicating how likely it is to occur.
+#### our vision to use the model
+Here is how we envision it should be used: For example, you are a doctor and want to determine how dangerous it is to give your patient four specific drugs at the same time. You can add each drug through the search bar, make any necessary adjustments in the list of drugs, and check the calculations on the right. Now, you may want to explore similar drugs that have the same effect as the other drugs but a lower probability of causing polypharmacy.
+
+!!! example "UI Demo Prototype"
+    <figure markdown>
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/ui-demo-1.jpeg){ width=800" }
+    <figcaption>This is the initial prototype for the UI that healthcare professionals would use to interact with our model</figcaption>
+    </figure>
+
 
 [^1]: https://doi.org/10.1016/j.archger.2018.06.018
 
