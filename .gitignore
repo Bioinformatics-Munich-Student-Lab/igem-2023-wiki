@@ -18,3 +18,5 @@ mkdocs-material-insiders-master
 /.cache/
 **/.cache/
 site
+
+mkdocs-material-insiders-master.zip

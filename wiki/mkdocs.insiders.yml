@@ -1,9 +1,0 @@
-INHERIT: mkdocs.yml
-
-# plugins:
-#   privacy: {}
-
-# theme:
-#   features:
-    # navigation.instant: {}
-    # navigation.path: {}
