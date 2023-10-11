@@ -2,20 +2,37 @@
 
 {% block hero %}
     <!--<div class="md-grid md-post--excerpt">-->
-    <div class="md-grid md-post--excerpt">
-        {% with name="Jannis" %}
+    <div class="md-grid md-post--excerpt team-members">
+        {% with name="finn" %}
             {% include "custom/partials/custom_team.html" %}
         {% endwith %}
-        {% with name="Finn" %}
+        {% with name="david" %}
             {% include "custom/partials/custom_team.html" %}
         {% endwith %}
-        {% with name="Jannis" %}
+        {% with name="chengwei" %}
             {% include "custom/partials/custom_team.html" %}
         {% endwith %}
-        {% with name="Finn" %}
+        {% with name="leon" %}
+            {% include "custom/partials/custom_team.html" %}
+        {% endwith %}
+        {% with name="chris" %}
+            {% include "custom/partials/custom_team.html" %}
+        {% endwith %}
+        {% with name="julius" %}
+            {% include "custom/partials/custom_team.html" %}
+        {% endwith %}
+        {% with name="jannis" %}
             {% include "custom/partials/custom_team.html" %}
         {% endwith %}
     </div>
+    <style>
+        @media screen and (min-width: 76.1875em) {
+            main {
+               display: none;
+            }
+        }
+    </style>
 {% endblock %}
 
-{% block content %}{% endblock %}
+{% block container %}
+{% endblock %}

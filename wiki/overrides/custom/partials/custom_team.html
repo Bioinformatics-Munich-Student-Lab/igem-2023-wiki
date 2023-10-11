@@ -1,12 +1,20 @@
-{% set id = ("team_member_" + (range(100000) | random | string)) %}
-<div class="team-member">
-    <input type="radio" id="{{ id }}" name="team-member" style="display: none">
-    <label class="md-typeset" for="{{ id }}">
-        <a class="md-author team-member-image">
-            <img src="{{ 'assets/images/placeholder.png' | url }}" style="">
-        </a>
-    </label>
-    <div class="team-member-description">
-        {{ name }}
+<div class="team-member md-typeset">
+    <a class="glightbox md-author team-member-image"
+       data-glightbox="moreLength: 0; title: {{ name | capitalize | e}}; description: .custom-desc-{{ name | urlencode}}">
+        <img src="{{ 'https://static.igem.wiki/teams/5016/wiki/' + (name | urlencode) + '.jpg' }}">
+        <div>
+            {{ name | capitalize }}
+        </div>
+    </a>
+    <div class="glightbox-desc custom-desc-{{ name | urlencode }}">
+        <div class="team-member-fullscreen">
+            <div class="team-member-image-full">
+                <img src="{{ 'https://static.igem.wiki/teams/5016/wiki/' + (name | urlencode) + '.jpg' }}">
+            </div>
+            <div class="team-member-description">
+                {% include 'assets/team/' + (name | urlencode) + '.html' %}
+            </div>
+        </div>
     </div>
 </div>
+
