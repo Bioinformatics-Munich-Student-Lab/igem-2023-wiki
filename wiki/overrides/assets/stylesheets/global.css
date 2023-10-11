@@ -87,6 +87,10 @@ img.whitened:hover {
     color: #fff;
 }
 
+.md-typeset h3 {
+    color: #fff;
+}
+
 /* Timeline */
 
 .nt-timeline .nt-timeline-content {

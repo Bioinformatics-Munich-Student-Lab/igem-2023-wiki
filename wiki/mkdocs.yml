@@ -121,12 +121,12 @@ nav:
   - Human Practices: human-practices.md
   - Awards:
     # - Awards: awards.md
+    - Model: model.md
     - Education: education.md
     - Entrepreneurship: entrepreneurship.md
     # - Hardware: hardware.md
     # - Inclusivity: inclusivity.md
     # - Measurement: measurement.md
-    - Model: model.md
     # - Plant: plant.md
     # - Software: software.md
     # - Sustainable: sustainable.md
@@ -134,7 +134,6 @@ nav:
       - Test Upper: test_upper.md
       - Test: test.md
       - Test2: test_child.md
-      # - Inner:
       - Inner: description_alt.md
       - Content Template Test: content_template_test.md
   # - Contact: contact.md
