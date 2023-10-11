@@ -17,6 +17,7 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.keys
   - pymdownx.smartsymbols
+  - neoteroi.timeline
   - pymdownx.escapeall:
       hardbreak: true
   -  pymdownx.emoji:
@@ -48,11 +49,12 @@ extra_javascript:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/glightbox.css
+  - assets/stylesheets/neoteroi.css
 
 theme:
   name: material
   logo: https://static.igem.wiki/teams/5016/wiki/logo-icons/pilly.svg
-  favicon: assets/favicon.png
+  favicon: https://static.igem.wiki/teams/5016/wiki/logo-icons/logo-icons/favicon.png
   custom_dir: overrides
   font:
     text: Montserrat
@@ -73,7 +75,7 @@ theme:
     - content.code.copy
     # Premium features
     - content.tooltips
-    - navigation.path
+    # - navigation.path
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:
@@ -93,7 +95,11 @@ plugins:
   # Premium features
   privacy:
     links_attr_map:
-        target: _blank
+      target: _blank
+    assets_exclude:
+      - static.igem.wiki/*
+      - uploads.igem.org/*
+      - igem.org/*
   typeset: {}
 
 nav:
@@ -103,12 +109,12 @@ nav:
     - Attributions: attributions.md
   - Project:
     # - Project: project.md
-    - Contribution: contribution.md
     - Description: description.md
     - Engineering: engineering.md
     - Experiments: experiments.md
-    - Notebook: notebook.md
     - Results: results.md
+    - Contribution: contribution.md
+    - Notebook: notebook.md
   - Safety: safety.md
   - Human Practices: human-practices.md
   - Awards:
@@ -118,7 +124,7 @@ nav:
     # - Hardware: hardware.md
     # - Inclusivity: inclusivity.md
     # - Measurement: measurement.md
-    # - Model: model.md
+    - Model: model.md
     # - Plant: plant.md
     # - Software: software.md
     # - Sustainable: sustainable.md
@@ -129,7 +135,7 @@ nav:
       # - Inner:
       - Inner: description_alt.md
       - Content Template Test: content_template_test.md
-  - Contact: contact.md
+  # - Contact: contact.md
 
 extra:
   generator: false
@@ -176,7 +182,7 @@ extra:
 copyright: >
   &copy; 2023 –
   Content on this site is licensed under a 
-  <a href="https://creativecommons.org/licenses/by/4.0/" style="text-decoration: underline; onmouseover="color=LightGray";>Creative Commons Attribution 4.0 International license</a> 
+  <a href="https://creativecommons.org/licenses/by/4.0/" style="text-decoration: underline; onmouseover="color=LightGray";>Creative Commons Attribution 4.0 International License</a> 
   &emsp;
   <a href="#__consent">Cookie settings</a>
   <br>

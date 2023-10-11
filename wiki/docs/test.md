@@ -3,12 +3,12 @@ template: custom/contentpage.html
 # status: new
 title: Lorem ipsum dolor sit amet
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.  
-subtitle: this is a subtitle
-hero_text: asdf
-hero_image1: /munichbioinformatics/img/plot1.png
-hero_image2: /munichbioinformatics/img/plot1.png
-hero_image3: /munichbioinformatics/img/plot1.png
-hero_image4: /munichbioinformatics/img/plot1.png
+# subtitle: this is a subtitle
+hero_text: Test Page
+hero_image1: https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg
+# hero_image2: https://static.igem.wiki/teams/5016/wiki/tum-cit.png
+hero_image3: https://static.igem.wiki/teams/5016/wiki/roche.svg
+hero_image4: https://static.igem.wiki/teams/5016/wiki/freunde-der-tum.svg
 ---
 
 # Test page
