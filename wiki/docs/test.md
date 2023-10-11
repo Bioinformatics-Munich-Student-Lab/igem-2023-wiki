@@ -32,7 +32,7 @@ do these changes propagate again?
 
 ## Code
 
-```python
+```python title="bubble_sort.py" linenums="227" hl_lines="2-6"
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -88,6 +88,15 @@ for epoch in range(100):
 
 print('Hello World')
 ```
+
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
 
 ## Figures
 
