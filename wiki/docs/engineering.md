@@ -38,6 +38,9 @@ As we observed that our neural net was learning much faster in the later trainin
 This is simpler to predict, and training the main model to discriminate these fake interactions from real interactions has been shown to improve training performance, particularly in graph neural networks.
 However, we observed that the adversarial network was getting too good a bit too fast, and narrowing down towards a set of clearly non-interacting drugs, causing training performance to decline sharply as training progressed, and decreasing training performance overall.
 
+To address the limitation of the base Decagon model of performance declining for drugs that are not well characterized, we decided to extend our graph once more, with edges between all drugs that are chemically similar to each other.
+This allows the network to use the biochemical information of structurally similar compounds that may be better characterized, and further increased total model performance.
+
 During the project, we used a GitHub organization to maintain multiple git repositories for different projects and track issues and deliverables for each sprint.
 Communication in the team was handled asynchronously via slack, with a weekly virtual team meeting to make sure that when we were split up in small subteams we were still considering the big picture our subgoals fit into.
 
