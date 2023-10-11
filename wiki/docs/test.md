@@ -4,11 +4,11 @@ template: custom/contentpage.html
 title: Lorem ipsum dolor sit amet
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.  
 subtitle: this is a subtitle
-hero_text: asdf
-hero_image1: /munichbioinformatics/img/plot1.png
-hero_image2: /munichbioinformatics/img/plot1.png
-hero_image3: /munichbioinformatics/img/plot1.png
-hero_image4: /munichbioinformatics/img/plot1.png
+hero_text: This is heroic stuff
+hero_image1: assets/images/hero_a.png
+hero_image2: assets/images/hero_b.png
+hero_image3: assets/images/hero_c.png
+hero_image4: assets/images/hero_d.png
 ---
 
 # Test page
