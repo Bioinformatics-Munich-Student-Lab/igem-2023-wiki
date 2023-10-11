@@ -11,7 +11,7 @@ This included running different scenarios, gathering data, and closely examining
     <figure markdown >
         ![Image title](https://static.igem.wiki/teams/5016/wiki/testing-data-of-our-model.png){ width="450"}
         
-    <figcaption>distribution of our Training, Validation and Test Data</figcaption>
+    <figcaption>Distribution of our Training, Validation and Test Data</figcaption>
     </figure>
 Recognizing the potential impact of our project emphasized the importance of extensive testing and validation.\
 We understood that our AI models will be used in real-world healthcare settings, where they will influence important medical decisions.\ Any mistakes or weaknesses in our models could seriously affect patient well-being.
