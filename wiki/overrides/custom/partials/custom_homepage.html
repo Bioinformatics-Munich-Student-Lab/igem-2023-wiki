@@ -12,9 +12,8 @@
 
         iframe {
             border-radius: 10px;
-            width: 100%;
-            height: 100%;
-            max-height: 100%;
+            width: 100vw;
+            height: 100vh;
         }
 
         .background_purple {
@@ -50,7 +49,6 @@
             radial-gradient(at 95% 45%, #c863c6 0, transparent 25%),
             radial-gradient(at 60% 71%, #9b56b5 0, transparent 29%);
             width: 100%;
-            height: 85rem;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -65,7 +63,6 @@
             radial-gradient(at 10% 27%, #6072ff 0, transparent 25%), 
             radial-gradient(at 95% 45%, #0d20cb 0, transparent 45%);
             width: 100%;
-            height: 170vh;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -79,8 +76,6 @@
             radial-gradient(at 20% 50%, hsl(273, 60%, 35%) 0, transparent 59%), 
             radial-gradient(at 82% 65%, #7f00e1 0, transparent 40%);
             width: 100%;
-            min-height: 86vh;
-            height: auto;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -159,8 +154,7 @@
                 -webkit-backdrop-filter: blur( 14.5px );
                 border-radius: 10px;
                 border: 1px solid rgba(207, 84, 226, 0.18);
-                width: 61rem; 
-                height: 170rem;
+                width: 61rem;
                 margin-top: 5%;
                 margin-bottom: 5%;
                 display: flex;
@@ -190,7 +184,6 @@
                 border-radius: 10px;
                 border: 1px solid rgba( 255, 255, 255, 0.18 );
                 width: 29.8rem;
-                height: auto;
                 margin-top: 5%;
                 margin-bottom: 5%;
                 margin-left: 0;
@@ -208,7 +201,6 @@
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             width: 29.8rem;
-            height: 30rem;
             margin-top: 10%;
             margin-bottom: 5%;
             margin-right: 22%;
@@ -322,7 +314,6 @@
 
         .parallax-image {
             filter: grayscale(100%) contrast(140%) brightness(140%);
-            height: 10rem;
             transition: transform 0.2s ease-out;
             top: 0;
             left: 0;
@@ -338,7 +329,6 @@
         /* Add a media query for screens with a maximum width of 768px (adjust as needed) */
         @media (max-width: 768px) {
             .background_end {
-                height: 140vh;
                 padding-bottom: 2rem; /* Add some space at the bottom */
             }
 
@@ -347,12 +337,6 @@
                 height: auto;
                 min-height: 40vh;
                 padding: 0 1rem; /* Add horizontal padding */
-            }
-
-            iframe {
-                border-radius: 10px; /* Remove border-radius for iframe */
-                height: auto;
-                width: 100%;
             }
 
             .background_end_pill {
