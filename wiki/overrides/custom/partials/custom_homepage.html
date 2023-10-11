@@ -250,13 +250,22 @@
         }
 
         .gradient_Headline_start {
-            font-size: 100px; 
-            margin-bottom: 0px;
-            background: #471DCF;
-            background: linear-gradient(to top, #471DCF 0%, #CCC1CF 74%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                font-size: 60px; /* Decreased font size for mobile */
+                margin-bottom: 20px; /* Added margin for spacing */
+                background: #471DCF;
+                background: linear-gradient(to top, #c1246b 0%, #CCC1CF 74%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center; /* Center align text */
+            }
+
+        .Headline_start {
+            font-size: 20px; 
+            margin: 3%;
+            margin-top: 3vh;
+            text-align: center;
+            color: #CCC0CF ;
         }
 
         .gradient_Headline_Graphs {
@@ -322,6 +331,10 @@
         .spline{
                 height: 100vh;     
                 }
+        .sepia_logo{
+            margin-top: 15vh;
+            width: 45vh;
+        }
         /* Add a media query for screens with a maximum width of 768px (adjust as needed) */
         @media (max-width: 768px) {
             .background_end {
@@ -411,14 +424,22 @@
             }
 
             .gradient_Headline_start {
-                font-size: 60px; /* Decreased font size for mobile */
+                font-size: 25px; /* Decreased font size for mobile */
                 margin-bottom: 20px; /* Added margin for spacing */
                 background: #471DCF;
-                background: linear-gradient(to top, #471DCF 0%, #CCC1CF 74%);
+                background: linear-gradient(to top, #c1246b 0%, #CCC1CF 74%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 text-align: center; /* Center align text */
+            }
+
+            .Headline_start {
+                font-size: 12px; 
+                margin: 3%;
+                margin-top: 3vh;
+                text-align: center;
+                color: #CCC0CF ;
             }
 
             .text_standard {
@@ -493,6 +514,10 @@
             display: flex;
             flex-direction: column; /* Change flex direction for stacking on mobile */
             align-items: center;
+        }
+
+        .sepia_logo{
+            width: 20vh;        
         }
 
         }
