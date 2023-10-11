@@ -72,10 +72,12 @@ theme:
     - navigation.top
     - navigation.indexes
     - announce.dismiss
-    - content.code.copy
     # Premium features
     - content.tooltips
     # - navigation.path
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
   icon:
     repo: fontawesome/brands/square-gitlab
   palette:

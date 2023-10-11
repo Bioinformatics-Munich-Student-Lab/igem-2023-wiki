@@ -49,5 +49,5 @@ These include but are not limited to patients, local communities, non-government
     <figcaption>Our (potential) stakeholders in the Power-Interst Grid</figcaption>
     </figure>
 
-[^1]: Mannheimer, Stina, et al. "Experiences of Patients Receiving Home Care and Living with Polypharmacy: A Qualitative Interview Study." BJGP Open, vol. 6, no. 2, 2022, https://doi.org/10.3399/BJGPO.2021.0181.
-[^2]: YouTube, YouTube, 2 Oct. 2023, https://www.youtube.com/watch?v=pqbFRi5kC0k.
+[^1]: Mannheimer, Stina, et al. "Experiences of Patients Receiving Home Care and Living with Polypharmacy: A Qualitative Interview Study." BJGP Open, vol. 6, no. 2, 2022, [https://doi.org/10.3399/BJGPO.2021.0181](https://doi.org/10.3399/BJGPO.2021.0181).
+[^2]: YouTube, YouTube, 2 Oct. 2023, [https://www.youtube.com/watch?v=pqbFRi5kC0k](https://www.youtube.com/watch?v=pqbFRi5kC0k).
