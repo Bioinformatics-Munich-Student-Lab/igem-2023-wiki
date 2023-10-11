@@ -3,21 +3,30 @@
     {% for i in range(4) %}
         {% if ('hero_image' + (i+1)|string) in page.meta %}
             <img src="{{ page.meta['hero_image' + ((i+1)|string)] | url}}" class="hero_image"/>
-        {% endif %}}
+        {% endif %}
     {% endfor %}
     <h1>{{ page.meta.hero_text }}</h1>
 </div>
 <script src="{{ 'assets/javascripts/simpleParallax.min.js' | url }}"></script>
 <script>
-    const hero_images = Array.from(document.getElementsByClassName('hero_image')).reverse();
-    let rate = 1;
-    for(let hero_image of hero_images) {
-        hero_image
-        new simpleParallax(hero_image, {
-            orientation: 'up',
-            scale: rate,
-            overflow: true
-        })
-        rate += 0.5;
-    }
+    (function () {
+        let header = document.getElementsByTagName("header")[0];
+        let heroContainer = document.getElementsByClassName("hero-container")[0];
+        let onResize = function() {
+            heroContainer.style.marginTop = "-" + header.clientHeight + "px"
+        }
+        header.onresize = onResize
+        onResize()
+
+        const hero_images = Array.from(heroContainer.children).reverse();
+        let rate = 1;
+        for(let hero_image of hero_images) {
+            new simpleParallax(hero_image, {
+                orientation: 'up',
+                scale: rate,
+                overflow: true
+            })
+            rate += 0.5;
+        }
+    })();
 </script>
