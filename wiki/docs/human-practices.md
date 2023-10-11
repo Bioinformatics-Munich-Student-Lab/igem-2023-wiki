@@ -8,7 +8,7 @@ We rigorously examined the implications of our research, focusing on ethical con
 In addition to “allergic symptoms, diarrhoea, loss of hair, [...], nausea, dizziness, or fatigue”, patients experienced social isolation, and their “symptoms were not taken seriously by healthcare professionals” [^1].
 
 ​​As we witness our grandparents diligently sorting their pills, we are confronted with a profound question: how do these medications, each with its own distinct biochemical signature and mechanisms of action, interact within the human body?\
-What impact do these medications have in conjunction with more complex biologics and therapeutics?
+What impact do these medications have in conjunction with other drugs, more complex biologics and therapeutics?
 
 ## The Solution is Software
 
