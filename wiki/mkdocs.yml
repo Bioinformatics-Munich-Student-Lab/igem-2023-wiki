@@ -118,7 +118,7 @@ nav:
     # - Hardware: hardware.md
     # - Inclusivity: inclusivity.md
     # - Measurement: measurement.md
-    # - Model: model.md
+    - Model: model.md
     # - Plant: plant.md
     # - Software: software.md
     # - Sustainable: sustainable.md
