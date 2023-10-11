@@ -99,6 +99,7 @@ plugins:
     assets_exclude:
       - static.igem.wiki/*
       - uploads.igem.org/*
+      - igem.org/*
   typeset: {}
 
 nav:
