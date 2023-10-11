@@ -95,7 +95,10 @@ plugins:
   # Premium features
   privacy:
     links_attr_map:
-        target: _blank
+      target: _blank
+    assets_exclude:
+      - static.igem.wiki/*
+      - uploads.igem.org/*
   typeset: {}
 
 nav:
