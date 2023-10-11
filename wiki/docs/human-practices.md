@@ -29,8 +29,13 @@ As part of our investigation into entrepreneurship and commercial viability, we 
 On the one hand, our model would be deployed in a healthcare setting, such as hospitals and care facilities, where it would be used by medical practitioners and professionals.\
 On the other hand, academics, pharmaceutical scientists, and biologists would leverage our model to make predictions about how the compound or therapy they are developing fits into the complex system of the human body and infer how a cocktail of medications would interact with the human biochemistry and other compounds, minimizing risks and maximizing therapeutic benefits.\
 Yet there are even more indirect stakeholders and interest groups that should not be overlooked.\
-These include but are not limited to patients, local communities, non-government organizations, governments, environmental activists.
+These include but are not limited to patients, local communities, non-government organizations, governments, and environmental activists.
 
+!!! example "UI Demo Prototype"
+    <figure markdown>
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/ui-demo-1.jpeg){ width=800" }
+    <figcaption>This is the initial prototype for the UI that healthcare professionals would use to interact with our model</figcaption>
+    </figure>
 
 !!! example "Power-Interst Grid: How it works"
     <figure markdown>
