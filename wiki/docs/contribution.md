@@ -1,5 +1,5 @@
 
-# Contributin
+# Contribution
 
 ### Introduction
 Polypharmacy means taking a lot of different medications at the same time, which can happen when a person has several health conditions or sees multiple doctors. While these medications can help with specific problems, they can also lead to problems like interactions, side effects, or confusion. Polypharmacy is one of the pressing issues of today's healthcare systems. It is defined as the concurrent use of five drugs or more by a single patient. Across Europe, polypharmacy is highly prevalent, with a prevalence of 32.1% for persons of age 65+ [^1]. The SEPiA Team took action, developed a neuronal network that can predict these side effects to prevent polypharmacy, and developed the first polypharmacy model that can use multiple drugs as input. Sepia is an attempt to provide a solution which is easy to use for patients, medical personnel as well as future researchers. To make sure that Sepia is as easy to use as possible, we developed both a user-oriented interface and python packages for easy distribution. With its user interface, Sepia can be a significant benefit for patients and doctors looking for side effects with prescribed medication. For research and development with Sepia, we offer an easy-to-use python package on PyPI [^2].Pretrained models and a docker container will also be made available through the Sepia GitHub repository [^3]. In the following, you can read about what kind of trouble we run into and what else you have to keep in mind if you want to do similar tasks.
@@ -17,12 +17,14 @@ Our first task was to find enough data to be able to properly train our model wh
 | `Data Marketplaces`| marketplaces like IBM Watson Health's MarketScan, offer medical datasets for purchase or licensing |
 | `Collaboration with Healthcare Providers`| hospitals, clinics, or healthcare institutions are able to provide de-identified patient data. To do this, you have to keep privacy regulations like HIPAA in the United States in mind|
 
+# Deploying our model in different ways 
+We want to deploy our neural network in different ways. We deploy our model on [Hugging Face](https://huggingface.co/BioinformaticsMunichStudentLab), so people who may not be familiar with iGEM can benefit from our work. Another option is to download our code from our GitLab and use our model as a foundational model, adjusting our code to your application. Instructions on how to work with our [GitLab](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) are provided in contribution. To try our model without any coding skills, you can visit our website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
 
 ## How to use our graphical user interface 
 #### The structure of our UI 
 Our UI can be split into three parts: the search bar, the list of drugs, and the list of polypharmacy.
 In the middle of the screen is our search bar, which can be used to search for and add a drug. This can be done multiple times to add multiple drugs. On the left side of the screen is the list of drugs, which displays every drug that has been added through the search bar. Each listed drug has a delete button to remove it from the calculation. On the right side are listed polypharmacies that are likely to occur because of the added drugs. Each polypharmacy has a displayed score, indicating how likely it is to occur.
-#### our vision to use the model
+#### our vision how to use the model
 Here is how we envision it should be used: For example, you are a doctor and want to determine how dangerous it is to give your patient four specific drugs at the same time. You can add each drug through the search bar, make any necessary adjustments in the list of drugs, and check the calculations on the right. Now, you may want to explore similar drugs that have the same effect as the other drugs but a lower probability of causing polypharmacy.
 
 !!! example "UI Demo Prototype"

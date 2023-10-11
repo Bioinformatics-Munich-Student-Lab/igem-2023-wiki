@@ -159,7 +159,7 @@ extra:
       link: https://docker.com
       name: Docker
     - icon: fontawesome/solid/face-grin-tears
-      link: https://huggingface.co
+      link: https://huggingface.co/BioinformaticsMunichStudentLab
       name: Hugging Face
     - icon: fontawesome/brands/instagram 
       link: https://instagram.com
