@@ -58,7 +58,7 @@ Now it's time to try our model yourself on [our website](http://sepia.bmsl.org/)
 2. Train the model using your own polypharmacy datasets
     
     ```shell
-    sepia train --train <training_set.csv> --test <test_set.csv> --checkpoint <path_to_model>
+    sepia train --train <path to training set> --test <path to test set> --out <path to output directory> [--config <path to config file> --checkpoint <path to trained model>] 
     ```
    
     OR
@@ -67,12 +67,12 @@ Now it's time to try our model yourself on [our website](http://sepia.bmsl.org/)
     Checkpoint files will be made available. A default checkpoint file is also included in the PyPI version.
 
 
-3. Use the trained model to predict side effects for your chemical compound of interest. The `--checkpoint` parameter can be omitted - the default model will then be used.
+3. Use the trained model to predict side effects for your chemical compound of interest. The `--checkpoint` parameter can be omitted - the default model will then be used.  `--effects` can also be omitted, probabilities for all available effects are predicted then.
    ```shell
-   sepia predict --checkpoint <path_to_model> --drugs <drug1> <drug2>
+   sepia predict --graph <path to polypharmacy graph> --drugs <drug1> <drug2>  [--checkpoint <path_to_model> --effects <effect1> <effect2>]
    ```
 
-Further documentation can be found in our [Git repository](https://github.com/Bioinformatics-Munich-Student-Lab/sepia).
+Further documentation and a config example can be found in our [Git repository](https://github.com/Bioinformatics-Munich-Student-Lab/sepia).
 
 # BIOINFORMATICS MUNICH STUDENT LAB E.V.
 We are proud of having established a non-profit organization for Bioinformatics students, a development that promises to simplify the process of initiating new student projects in the future. This non-profit organization will not only simplify the process of initiating projects but will also create opportunities for attracting sponsors in the future. German companies, for instance, can avail themselves of a tax reduction benefit by sponsoring a non-profit organization.
