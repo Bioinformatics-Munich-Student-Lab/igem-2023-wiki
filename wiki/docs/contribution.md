@@ -52,13 +52,19 @@ Here is how we envision it should be used: For example, you are a doctor and wan
 
 
 3. Use the trained model to predict side effects for your chemical compound of interest. The `--checkpoint` parameter can be omitted - the default model will then be used.
-
    ```shell
    sepia predict --checkpoint <path_to_model> --drugs <drug1> <drug2>
    ```
 
-Further documentation can be found in our git repository [^3].
+Further documentation can be found in our [Git repository](https://github.com/Bioinformatics-Munich-Student-Lab/sepia).
 
+# BIOINFORMATICS MUNICH STUDENT LAB E.V.
+We are proud of having established a non-profit organization for Bioinformatics students, a development that promises to simplify the process of initiating new student projects in the future. This non-profit organization will not only simplify the process of initiating projects but will also create opportunities for attracting sponsors in the future. German companies, for instance, can avail themselves of a tax reduction benefit by sponsoring a non-profit organization.
+
+Our primary objective is to inspire students in the early stages of their careers to participate in competitions such as iGEM, thereby gaining invaluable experience, much like we did through our iGEM journey. By supporting these budding talents, we aim to foster a thriving community of young bioinformaticians who can contribute to the field's advancement and make a positive impact on the world of science and technology.
+If you want to join the BIOINFORMATICS MUNICH STUDENT LAB E.V. or just want more information, [click here](https://bmsl.org/) to go to our website.
+
+# how future iGEM teams can benefit from our project 
 
 [^1]: https://doi.org/10.1016/j.archger.2018.06.018
 
