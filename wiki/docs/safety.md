@@ -1,5 +1,3 @@
-iGEM Munich Bioinformatics takes great pride in our commitment to adhere to safety and security rules throughout our project. In line with the stringent requirements in synthetic biology, we made significant efforts to ensure responsible practices and minimize potential risks associated with our work.
-=======
 ---
 template: custom/contentpage.html
 hero_text: Safety
@@ -17,12 +15,6 @@ To protect sensitive personal information, we prioritized the use of anonymous d
 Ensuring patient safety was a top priority for our team. We performed thorough testing and validation to check the accuracy and reliability of our AI models.
 Our goal was to reduce the chances of mistakes or incorrect prediction that could harm patients. We openly communicate the performance of our model.
 
-!!! TODO replace example ?? ""
-    <figure markdown>
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/testing-data-of-our-model.png){ width="450"}
-        
-    <figcaption>Distribution of our Training, Validation and Test Data</figcaption>
-    </figure>
 Recognizing the potential impact of our project emphasized the importance of extensive testing and validation.
 We understood that our AI models can be used in real-world healthcare settings, where they might influence important medical decisions. Any mistakes or weaknesses in our models could seriously affect a patient's well-being.
 
