@@ -1,0 +1,122 @@
+---
+template: custom/contentpage.html
+hero_text: Engineering
+hero_image1: https://static.igem.wiki/teams/5016/wiki/engineering-1.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-2-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blank.png
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
+---
+
+# Software Engineering Success in SEPIA
+
+## Overview
+
+Polypharmacy presents a complex and non-linear, but highly prevalent risk profile [^1] [^2] [^3].\
+It is also a highly intersectional issue, involving doctors, pharmacists, caregivers, regulators and pharma companies [^3] [^4].\
+To identify how we as bioinformaticians could make a meaningful contribution to this multifaceted issue, we first extensively researched the existing literature and reached out to key subject-matter experts:\
+Dr. Markus List, group leader at TUM and jointly responsible for the bioinformatics part of the [REPO4EU](https://repo4.eu/the-platform/) project developing methods for drug repurposing and Prof. Julia Stingl, head of the Clinical Pharmacology department at the University Hospital Aachen and one of Germany's leading researchers on polypharmacy and pharmacogenomics.
+
+
+To our surprise, we discovered that previous Bioinformatics approaches for predicting drug-drug interactions had solely focused on patients taking two drugs at once, whereas a typical patient in a care setting might on average take 5-10 drugs [^3] [^5].
+By discussing with stakeholders at an early stage, we were able to identify this critical issue in the prior work and learn that most of the drugs taken by any given polypharmaceutic patient are old, widely available as generics and well-characterized (think NSAIDs, diuretics, SSRIs, statins).
+
+We have outlined some of the more significant engineering cycles we completed.
+
+## Agile Development
+
+In order to tackle this problem we adhered to a the engineering design cycle, which is commonly found in synthetic biology but also in software engineering.\
+We enhanced the engineering cycle using principles from Agile to incrase productivity in a fast paced software focused development team.
+
+Agile is a software development methodology and set of principles that emphasize flexibility, collaboration, and customer-centricity to deliver high-quality software efficiently.\
+It is an iterative and incremental approach to software development that contrasts with traditional, linear methodologies.\
+Agile methodologies promote adaptability, transparency, and constant improvement throughout the development process.
+
+Agile encourages delivering working software at the end of each iteration.\
+This ensures that the software is always in a potentially shippable state, which can be released to customers whenever necessary. As such, we were forced to repeadelty go through the engineering cycle.
+
+We found the agile-inspired workflow to work well for the project.\
+Due to our small team size, it was paramount that tasks were distributed and completed efficiently.\
+Our implementaion of the agile engineering cycle demanded two weekly meetings for the devleopmemt teams. Teammembers were incetivised to dicuss more specific issues in smaller meetings, where only those who were needed had to be present.\
+We aimed to iterate through an engineering once every two weeks, meaning everbydoy had four opportunities to show thier progress and recieve feedback.\
+During the project, we used a GitHub organization to maintain multiple git repositories for different subprojects and track issues and deliverables during each sprint.\
+
+On the one hand we were able to dive deeply into the code and work on implementing novel machine learning techniques, but on the other hand the regular check-ins with other team members and collaborators grounded us to keep a view on the real-world problem we were working on.
+
+<figure markdown>
+  ![Image title](https://static.igem.wiki/teams/5016/wiki/engineering-001.jpeg){ width="1800" }
+  <figcaption>The adaptaion of the engineering cycle for machine larning development that we adhered to for the course of our project</figcaption>
+</figure>
+
+## Cycle I - Adapt Existing Work
+
+We all stand on the shoulders of giants.\
+A great way to gain some intital insights into a topic as adapting something which already exists.
+
+After the initial step of careful requirements engineering and gaining an overview of previous work in this field, we decided to base our engineering project on a previous drug-drug interaction prediction pipeline (»Decagon«) using multimodal drug-protein and protein-protein interaction networks [^6].\
+Decagon excels at predicting the pairwise interactions between well-characterized drugs, but its performance is limited for drugs that are not well characterized (and typically more novel or rarely prescribed).\
+This is a tradeoff we felt comfortable making, as we knew that a typical patient would be taking mostly well-characterized substances.
+
+
+<figure markdown >
+    ![Decagon multimodal graph](https://static.igem.wiki/teams/5016/wiki/decagon.jpg){ width="600"}
+<figcaption>The multimodal graph used by Decagon. Figure from ref. 1.</figcaption>
+</figure>
+
+However, both the dataset used for training and the codebase of Decagon proved to be seriously outdated.\
+Instead of extending an six-year-old codebase and forever locking our project into `tensorflow 2.7`, we chose to create a new training dataset from drug interaction adverse events reported to the FDA, and reimplement Decagon as our first deliverable.\
+For this, we split into sub-teams and used agile software development techniques, with weekly synchronization meetings to keep all parts of our projects working smoothly with each other.\
+Reimplementing Decagon using pytorch and a modernized version of the training dataset took us almost two months, but by starting from a modern and lean codebase we had full knowledge of, we were able to quickly extend our model to address the problem of true polypharmacy prediction.
+
+## Cycle II - Polypharmacy
+
+For this, we had to extend the graph used by Decagon to incorporate the possibility of multiple drugs interacting at once.\
+In a simple graph, these kinds of relationships – more technically referred to as hyperedges – cannot be natively represented.\
+However, current Machine Learning frameworks are limited to these simple graph representations.\
+So we decided to take an alternative approach, and find a way to encode the hyperedge information in a simple graph.\
+We added another node type to the graph that represents multi-drug interactions.\
+During the graph construction, all interactions present in the training data are added as a node to the graph, and a connection to each of the drugs present in the interaction is added.\
+The model then learns this graph structure, turning the multidrug interaction problem from a hyperedge prediction problem into a simple link prediction problem.
+
+
+!!! example "Mapping out data structures and model architecture"
+    <figure markdown>
+    ![Image title](https://static.igem.wiki/teams/5016/wiki/model-design.jpg){ width="1800" }
+    <figcaption>An adaptation of the engineering cycle for machine learning development that we adhered to for the course of our project</figcaption>
+    </figure>
+
+<figure markdown >
+    ![Decagon multimodal graph](https://static.igem.wiki/teams/5016/wiki/hypergraph.jpg){ width="600"}
+<figcaption>Our approach to encode true polypharmacy interactions in a simple graph model.</figcaption>
+</figure>
+
+After implementing this in our second sprint, we found that the graph constructed to train the model would incorporate all of the information required, but crash during the training process because it was using more memory than our computers had.\
+So we focused our next sprint on optimizing the model, reducing memory utilization by deduplicating the graph before training and streamlining the training process.\
+After this optimization, we were able to remove our earlier stop-gap solution of pruning the graph to contain only a subset of the full information and train once again on the full graph.
+
+Meanwhile we also started working on deploying our model.\
+During requirements engineering, we had learned that in order to have a real-world impact in the clinic, our model would need to be easily usable by clinicians, without installing and training their own Machine Learning model or relying on external bioinformaticians to run predictions.\
+As the drugs a patient takes are not personally identifying medical information and can be freely processed, we decided to build a webserver that a physician or pharmacist can input a given medication plan into and receive predicted interactions among the prescribed drugs.\
+The physician can then identify potentially relevant interactions and adjust the medication plan or inform the patient, to empower pharmacovigilance in the clinic.
+
+
+## Cycle III - Tuning the Model
+
+As we observed that our neural net was learning much faster in the later training iterations than in the earlier iterations, we tried in the next sprint training an adversarial network along with our main network to generate sets of drugs that do *not* interact.\
+This is simpler to predict, and training the main model to discriminate these fake interactions from real interactions has been shown to improve training performance, particularly in graph neural networks {^7].\
+However, we observed that the adversarial network was getting too good a bit too fast, and narrowing down towards a set of clearly non-interacting drugs, causing training performance to decline sharply as training progressed, and decreasing training performance overall.\
+
+To address the limitation of the base Decagon model of declining performance for sparsely characterized drugs, we decided to extend our graph once more, with edges between all drugs that are chemically similar to each other.\
+This allows the network to use the biochemical information of structurally similar compounds that may be better characterized, and further increased total model performance.\
+The advantages of this approach have been demonstrated in a recent pairwise drug interaction prediction software [^8].
+
+
+## References
+
+[^1] Van Wilder L, Devleesschauwer B, Clays E, Pype P, Vandepitte S, De Smedt D. Polypharmacy and Health-Related Quality of Life/Psychological Distress Among Patients With Chronic Disease. Prev Chronic Dis 2022;19:220062. DOI: http://dx.doi.org/10.5888/pcd19.220062
+[^2] Masnoon N, Shakib S, Kalisch-Ellett L, Caughey GE. What is polypharmacy? A systematic review of definitions. BMC Geriatr. 2017 Oct 10;17(1):230. doi: 10.1186/s12877-017-0621-2. PMID: 29017448; PMCID: PMC5635569.
+[^3] Zhang N, Sundquist J, Sundquist K and Ji J (2020) An Increasing Trend in the Prevalence of Polypharmacy in Sweden: A Nationwide Register-Based Study. Front. Pharmacol. 11:326. doi: 10.3389/fphar.2020.00326
+[^4] Kantor ED, Rehm CD, Haas JS, Chan AT, Giovannucci EL. Trends in Prescription Drug Use Among Adults in the United States From 1999-2012. JAMA. 2015;314(17):1818–1830. doi:10.1001/jama.2015.13766
+[^5] Han K, Cao P, Wang Y, Xie F, Ma J, Yu M, Wang J, Xu Y, Zhang Y and Wan J (2022) A Review of Approaches for Predicting Drug–Drug Interactions Based on Machine Learning. Front. Pharmacol. 12:814858. doi: 10.3389/fphar.2021.814858
+[^6] Marinka Zitnik, Monica Agrawal, Jure Leskovec, Modeling polypharmacy side effects with graph convolutional networks, Bioinformatics, Volume 34, Issue 13, July 2018, Pages i457–i466, https://doi.org/10.1093/bioinformatics/bty294
+[^7] Lukas Gosch, Simon Geisler, Daniel Sturm, Bertrand Charpentier, Daniel Zügner, Stephan Günnemann, arXiv:2306.15427 [cs.LG]
+[^8] Lukashina, N., Kartysheva, E., Spjuth, O. et al. SimVec: predicting polypharmacy side effects for new drugs. J Cheminform 14, 49 (2022). https://doi.org/10.1186/s13321-022-00632-5

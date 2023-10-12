@@ -1,3 +1,11 @@
+---
+template: custom/contentpage.html
+hero_text: Contribution
+hero_image1: https://static.igem.wiki/teams/5016/wiki/luke-jones-s2nw-ptkbmk-unsplash-small.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-4-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-5-right.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
+---
 
 # Contribution
 
