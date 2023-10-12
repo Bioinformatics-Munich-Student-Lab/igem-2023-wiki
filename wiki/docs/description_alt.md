@@ -8,11 +8,12 @@ While often necessary, in some cases, polypharmacy is associated with various ri
 As such, Polypharmacy is recognized as an increasingly serious problem affecting nearly 15% of the U.S. population (Trends in Prescription Drug Use among Adults in the United States, Kantor et al., 2015) and causing treatment costs of over $177 billion a year in the U.S. alone (Drug-related morbidity and mortality: updating the cost-of-illness model, Ernst, and Grizzle, 2001). According to “A 12-gene pharmacogenetic panel to prevent adverse drug reactions: an open-label, multicentre, controlled, cluster- randomized crossover implementation study” by Swen et al. 2023, pharmacogenetic-panel testing alone can reduce a patient’s direct medical charges by more than USD 7000.
 The US are not the only country affected by this problem. In “Trends in polypharmacy and dispensed drugs among adults in the Netherlands as compared to the United States” Oktora et al. conducted a cross-sectional study in the netherlands, finding that polypharmacy prevalence increased from 3.1% to 8.0% over the time period from 1999 to 2014, as depicted in figure 1.
 
-<figure markdown>
-  ![Image title](img/plot1-dark.png){ width="600" }
-  <figcaption>Figure 1</figcaption>
-</figure>
-
+!!! example "Trends in Polypharmacy"
+    <figure markdown>
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/plot1-dark.png){ width=600" }
+    <figcaption>Trends in polypharmacy among adults in the Netherlands 1999–2014, stratified by age.[^6]</figcaption>
+    </figure>
+    
 ### Motivation
 
 Our team was deeply motivated to choose this project because of the personal experiences many of us have had with elderly family members, particularly our grandparents.
