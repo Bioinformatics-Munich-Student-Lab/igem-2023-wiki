@@ -13,6 +13,7 @@
     (function () {
         let header = document.getElementsByTagName("header")[0];
         let heroContainer = document.getElementsByClassName("hero-container")[0];
+        let heroHeadline = document.getElementsByClassName("hero-headline")[0];
         let onResize = function () {
             heroContainer.style.marginTop = "-" + header.clientHeight + "px";
         }
@@ -30,5 +31,10 @@
             });
             rate += 1;
         }
+        new simpleParallax(heroHeadline, {
+            orientation: 'up',
+            scale: 1.5,
+            overflow: true
+        });
     })();
 </script>
