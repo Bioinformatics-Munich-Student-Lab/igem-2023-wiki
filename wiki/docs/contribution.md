@@ -1,3 +1,12 @@
+---
+template: custom/contentpage.html
+hero_text: Contribution
+hero_image1: https://static.igem.wiki/teams/5016/wiki/luke-jones-s2nw-ptkbmk-unsplash-small.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-4-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-5-right.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
+---
+
 Polypharmacy is one of the pressing issues of today's healthcare systems. It is defined as the concurrent use of five drugs or more by a single patient. Across Europe, polypharmacy is highly prevalent, with a prevalence of 32.1% for persons of age 65+ [[1]].
 
 Most of the problems with polypharmacy stem from the fact that side effects are often not being considered. Sepia is an attempt to provide a solution which is easy to use for patients, medical personnel as well as future researchers.

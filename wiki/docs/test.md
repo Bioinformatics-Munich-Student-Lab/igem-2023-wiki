@@ -3,12 +3,12 @@ template: custom/contentpage.html
 # status: new
 title: Lorem ipsum dolor sit amet
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.  
-subtitle: this is a subtitle
-hero_text: This is heroic stuff
-hero_image1: assets/images/hero_a.png
-hero_image2: assets/images/hero_b.png
-hero_image3: assets/images/hero_c.png
-hero_image4: assets/images/hero_d.png
+# subtitle: this is a subtitle
+hero_text: Test Page
+hero_image1: https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg
+# hero_image2: https://static.igem.wiki/teams/5016/wiki/tum-cit.png
+hero_image3: https://static.igem.wiki/teams/5016/wiki/roche.svg
+hero_image4: https://static.igem.wiki/teams/5016/wiki/freunde-der-tum.svg
 ---
 
 # Test page
@@ -32,7 +32,7 @@ do these changes propagate again?
 
 ## Code
 
-```python
+```python title="bubble_sort.py" linenums="227" hl_lines="2-6"
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -88,6 +88,15 @@ for epoch in range(100):
 
 print('Hello World')
 ```
+
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
+    text__, images, ... basically anything that can be written in Markdown.
 
 ## Figures
 

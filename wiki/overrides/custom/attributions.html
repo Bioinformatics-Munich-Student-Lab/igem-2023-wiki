@@ -4,6 +4,10 @@
 {{ super() }}
 {% endblock %}
 
+{% block hero %}
+    {% include "custom/partials/custom_hero_content.html" %}
+{% endblock %}
+
 {% block content %}
 <div>
     <script>

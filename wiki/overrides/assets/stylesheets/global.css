@@ -87,6 +87,10 @@ img.whitened:hover {
     color: #fff;
 }
 
+.md-typeset h3 {
+    color: #fff;
+}
+
 /* Timeline */
 
 .nt-timeline .nt-timeline-content {
@@ -111,4 +115,16 @@ img.whitened:hover {
 
 .timeline-organizational .nt-timeline-dot {
     background-color: #FFA500 !important;
+}
+@media (max-width: 768px) {
+    img.whitened {
+        filter: grayscale(100%) contrast(140%) brightness(140%);
+        height: 3.5rem;
+        margin-right: 0;
+        transition: 0.7s;
+    }
+    
+    img.whitened:hover {
+        filter: none;
+    }
 }
