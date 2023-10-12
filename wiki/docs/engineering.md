@@ -112,11 +112,11 @@ The advantages of this approach have been demonstrated in a recent pairwise drug
 
 ## References
 
-[^1] Van Wilder L, Devleesschauwer B, Clays E, Pype P, Vandepitte S, De Smedt D. Polypharmacy and Health-Related Quality of Life/Psychological Distress Among Patients With Chronic Disease. Prev Chronic Dis 2022;19:220062. DOI: http://dx.doi.org/10.5888/pcd19.220062
-[^2] Masnoon N, Shakib S, Kalisch-Ellett L, Caughey GE. What is polypharmacy? A systematic review of definitions. BMC Geriatr. 2017 Oct 10;17(1):230. doi: 10.1186/s12877-017-0621-2. PMID: 29017448; PMCID: PMC5635569.
-[^3] Zhang N, Sundquist J, Sundquist K and Ji J (2020) An Increasing Trend in the Prevalence of Polypharmacy in Sweden: A Nationwide Register-Based Study. Front. Pharmacol. 11:326. doi: 10.3389/fphar.2020.00326
-[^4] Kantor ED, Rehm CD, Haas JS, Chan AT, Giovannucci EL. Trends in Prescription Drug Use Among Adults in the United States From 1999-2012. JAMA. 2015;314(17):1818–1830. doi:10.1001/jama.2015.13766
-[^5] Han K, Cao P, Wang Y, Xie F, Ma J, Yu M, Wang J, Xu Y, Zhang Y and Wan J (2022) A Review of Approaches for Predicting Drug–Drug Interactions Based on Machine Learning. Front. Pharmacol. 12:814858. doi: 10.3389/fphar.2021.814858
-[^6] Marinka Zitnik, Monica Agrawal, Jure Leskovec, Modeling polypharmacy side effects with graph convolutional networks, Bioinformatics, Volume 34, Issue 13, July 2018, Pages i457–i466, https://doi.org/10.1093/bioinformatics/bty294
-[^7] Lukas Gosch, Simon Geisler, Daniel Sturm, Bertrand Charpentier, Daniel Zügner, Stephan Günnemann, arXiv:2306.15427 [cs.LG]
-[^8] Lukashina, N., Kartysheva, E., Spjuth, O. et al. SimVec: predicting polypharmacy side effects for new drugs. J Cheminform 14, 49 (2022). https://doi.org/10.1186/s13321-022-00632-5
+[^1]: Van Wilder L, Devleesschauwer B, Clays E, Pype P, Vandepitte S, De Smedt D. Polypharmacy and Health-Related Quality of Life/Psychological Distress Among Patients With Chronic Disease. Prev Chronic Dis 2022;19:220062. DOI: http://dx.doi.org/10.5888/pcd19.220062
+[^2]: Masnoon N, Shakib S, Kalisch-Ellett L, Caughey GE. What is polypharmacy? A systematic review of definitions. BMC Geriatr. 2017 Oct 10;17(1):230. doi: 10.1186/s12877-017-0621-2. PMID: 29017448; PMCID: PMC5635569.
+[^3]: Zhang N, Sundquist J, Sundquist K and Ji J (2020) An Increasing Trend in the Prevalence of Polypharmacy in Sweden: A Nationwide Register-Based Study. Front. Pharmacol. 11:326. doi: 10.3389/fphar.2020.00326
+[^4]: Kantor ED, Rehm CD, Haas JS, Chan AT, Giovannucci EL. Trends in Prescription Drug Use Among Adults in the United States From 1999-2012. JAMA. 2015;314(17):1818–1830. doi:10.1001/jama.2015.13766
+[^5]: Han K, Cao P, Wang Y, Xie F, Ma J, Yu M, Wang J, Xu Y, Zhang Y and Wan J (2022) A Review of Approaches for Predicting Drug–Drug Interactions Based on Machine Learning. Front. Pharmacol. 12:814858. doi: 10.3389/fphar.2021.814858
+[^6]: Marinka Zitnik, Monica Agrawal, Jure Leskovec, Modeling polypharmacy side effects with graph convolutional networks, Bioinformatics, Volume 34, Issue 13, July 2018, Pages i457–i466, https://doi.org/10.1093/bioinformatics/bty294
+[^7]: Lukas Gosch, Simon Geisler, Daniel Sturm, Bertrand Charpentier, Daniel Zügner, Stephan Günnemann, arXiv:2306.15427 [cs.LG]
+[^8]: Lukashina, N., Kartysheva, E., Spjuth, O. et al. SimVec: predicting polypharmacy side effects for new drugs. J Cheminform 14, 49 (2022). https://doi.org/10.1186/s13321-022-00632-5
