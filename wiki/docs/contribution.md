@@ -80,7 +80,7 @@ We are proud of having established a non-profit organization for Bioinformatics 
 Our primary objective is to inspire students in the early stages of their careers to participate in competitions such as iGEM, thereby gaining invaluable experience, much like we did through our iGEM journey. By supporting these budding talents, we aim to foster a thriving community of young bioinformaticians who can contribute to the field's advancement and make a positive impact on the world of science and technology, and we hope that we can recruit more people next year to take part in the iGEM competition through our new non-profit organisation.
 If you want to join the BIOINFORMATICS MUNICH STUDENT LAB E.V. or just want more information, [click here](https://bmsl.org/) to go to our website.
 
-# how future iGEM teams can benefit from our project 
+# How Future iGEM Teams can Benefit from our Project 
 The groundwork we've established in our project offers benefits to other iGEM teams. Our efforts have created an opportunity for future teams to elevate the project to greater levels. Initially, they can capitalize on our pre-existing codebase and enhance our machine learning model. By expanding the dataset, incorporating more diverse sources of data, and delving into the integration of omics data, they can enhance the accuracy and versatility of the model. Instead of relying solely on data from the USA, teams can source information from different populations, including Europe, ensuring a more comprehensive and globally applicable approach to mitigating polypharmacy risks.
 
 Moreover, for iGEM teams keen on developing healthcare applications, our project provides an invaluable head start. They can seamlessly integrate our machine learning model into their software projects, instantly incorporating a functional and vital feature. This not only expedites the development process but also ensures that their applications are equipped with the latest advancements in predicting drug interactions, potentially making a meaningful impact on patient safety and healthcare outcomes.
@@ -90,4 +90,3 @@ Moreover, for iGEM teams keen on developing healthcare applications, our project
 [^2]: https://pypi.org/project/sepia-polypharmacy/
 
 [^3]: https://github.com/Bioinformatics-Munich-Student-Lab/sepia
-
