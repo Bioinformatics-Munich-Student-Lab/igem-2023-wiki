@@ -6,7 +6,7 @@
 }
 
 .team-member-image {
-    width: 10rem !important;
+    width: auto !important;
     height: auto !important;
     color: white !important;
     cursor: pointer;
@@ -17,6 +17,8 @@
 .team-member-image img {
     object-fit: cover;
     aspect-ratio: 1;
+    width: 12rem;
+    height: 12rem;
 }
 
 .team-member {
