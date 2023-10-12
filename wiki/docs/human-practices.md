@@ -1,3 +1,12 @@
+---
+template: custom/contentpage.html
+hero_text: Human Practices
+hero_image1: https://static.igem.wiki/teams/5016/wiki/human-practices-3.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-2-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/pills-falling-left.png
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
+---
+
 # Human Practices: Our Work and the World
 
 We investigated the profound impact of our work.\
@@ -194,7 +203,7 @@ In order to identify who we should focus our attention on, we ranked our potenti
 ## Entrepreneurship and Commercial Viability
 
 Encapsulating research within the framework of a startup represents an innovative and highly effective approach to bringing cutting-edge solutions to the front line and making it widely accessible to a broader audience.\
-This would enable the translation of our research into a scalable software solution and expedite its availability to hospitals, healthcare providers, synthetic biologists, and biochemists.\
+This would enable the translation of our research into a scalable software solution and expedite its availability to hospitals, healthcare providers, synthetic biologists, and biochemists.
 
 As such, we spoke to the Silicon Valley-based Venture Capital investor Mani Honigstein from [HoneystoneVC](https://www.honeystonevc.com/) about potential startup implementations.
 
@@ -203,5 +212,5 @@ More information is available on the [entrepreneurship](/munichbioinformatics/en
 
 [^1]: Mannheimer, Stina, et al. "Experiences of Patients Receiving Home Care and Living with Polypharmacy: A Qualitative Interview Study." BJGP Open, vol. 6, no. 2, 2022, [https://doi.org/10.3399/BJGPO.2021.0181](https://doi.org/10.3399/BJGPO.2021.0181).
 [^2]: YouTube, YouTube, 2 Oct. 2023, [https://www.youtube.com/watch?v=pqbFRi5kC0k](https://www.youtube.com/watch?v=pqbFRi5kC0k).
-[^3]: Shah, Anish. “An Introduction to Huggingface Transformers for NLP.” W&B, 16 Nov. 2022, [wandb.ai/int_pb/huggingface/reports/An-Introduction-To-HuggingFace-Transformers-for-NLP--VmlldzoyOTgzMjI5#:~:text=HuggingFace%20is%20a%20large%20open,other%20practitioners%2C%20via%20its%20toolkit.](wandb.ai/int_pb/huggingface/reports/An-Introduction-To-HuggingFace-Transformers-for-NLP--VmlldzoyOTgzMjI5#:~:text=HuggingFace%20is%20a%20large%20open,other%20practitioners%2C%20via%20its%20toolkit.)
+[^3]: Shah, Anish. “An Introduction to Huggingface Transformers for NLP.” W&B, 16 Nov. 2022, [ https://wandb.ai/int_pb/huggingface/reports/An-Introduction-To-HuggingFace-Transformers-for-NLP--VmlldzoyOTgzMjI5#:~:text=HuggingFace%20is%20a%20large%20open,other%20practitioners%2C%20via%20its%20toolkit.](https://wandb.ai/int_pb/huggingface/reports/An-Introduction-To-HuggingFace-Transformers-for-NLP--VmlldzoyOTgzMjI5#:~:text=HuggingFace%20is%20a%20large%20open,other%20practitioners%2C%20via%20its%20toolkit.)
 

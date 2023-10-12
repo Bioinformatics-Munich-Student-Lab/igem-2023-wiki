@@ -1,3 +1,12 @@
+---
+template: custom/contentpage.html
+hero_text: Safety
+hero_image1: https://static.igem.wiki/teams/5016/wiki/safety-img-2.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-4-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-5-right.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
+---
+
 iGEM Munich Bioinformatics takes great pride in our commitment to adhering to safety and security rules throughout our project.\
 In line with the stringent requirements for Safety and Security in synthetic biology, we made significant efforts to ensure responsible practices and minimize potential risks associated with our work.
 
