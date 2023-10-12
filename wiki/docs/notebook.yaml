@@ -22,13 +22,35 @@
   title: Education Workshop
   key: timeline-education
 
+- content: 
+  icon: ':material-bug:'
+  sub_title: 10/04/2023
+  title: Finished Finetuning Model
+  key: timeline-outreach
+
+- content: 
+  icon: ':material-bug:'
+  sub_title: 09/15/2023
+  title: Fixed Memory Issues
+  key: timeline-outreach
+
+- content: 
+  icon: ':material-bug:'
+  sub_title: 09/05/2023
+  title: Ran into Memor Issues when training on entrie Graph
+  key: timeline-outreach
+
 - content: Drafted the scirpt, created 3D graphics, and edited the video. 
   icon: ':material-bug:'
   sub_title: 09/01/2023 to 09/14/2023
   title: Promotion Video
   key: timeline-project
 
-
+- content: 
+  icon: ':material-bug:'
+  sub_title: 05/10/2023
+  title: Translated and Updated Decagon from Tensorflow to Pytorch
+  key: timeline-outreach
 
 - content: 
   icon: ':material-bug:'
