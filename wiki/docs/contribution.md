@@ -8,6 +8,7 @@ The SEPiA team took action. A novel graph-convolutional neural network that can 
 
 ## Data handling 
 Training the SEPiA models requires data about polypharmacy side effects. Our first task was to find enough data to be able to properly train, test and validate the SEPiA model. We opted for the already de-identified, anonymized and freely available [nsides](https://tatonettilab.org/offsides/) dataset. This turned out to be a very good decision, as the dataset is large enough to be able to train the SEPiA model while also protecting the privacy of sensitive patient's data.
+If you want to know more details about our Dataset [check this out](/munichbioinformatics/model/#polypharmacy-dataset).
 
 ## Where to find Healtcare data
 | Method      | Description                          |
@@ -20,7 +21,7 @@ Training the SEPiA models requires data about polypharmacy side effects. Our fir
 | `Collaboration with Healthcare Providers`| hospitals, clinics, or healthcare institutions are able to provide de-identified patient data. To do this, you have to keep privacy regulations like HIPAA in the United States in mind|
 
 ## Deploying our model in different ways 
-We deploy our neural network in different ways. We deploy our model on our [Hugging Face account](https://huggingface.co/BioinformaticsMunichStudentLab), so a pretrained checkpoint can be downloaded and other people who may not be familiar with iGEM can benefit from our work and get in touch with our project. Another option is to download our code from our [SEPiA Git repository ](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) use SEPiA as a foundational model, adjusting the code to the specific application at hand. Instructions on how to work with our PyPi package are provided [hier](/munichbioinformatics/contribution/#how-to-use-the-pypi-package).Also, a basic pretrained checkpoint is included in the SEPiA PyPI repository. To try the SEPiA model without any coding or computationally expensive training, you can visit a live website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
+We deploy our neural network in different ways. We deploy our model on our [Hugging Face account](https://huggingface.co/BioinformaticsMunichStudentLab), so a pretrained checkpoint can be downloaded and other people who may not be familiar with iGEM can benefit from our work and get in touch with our project. Another option is to download our code from our [SEPiA Git repository ](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) use SEPiA as a foundational model, adjusting the code to the specific application at hand. Instructions on how to work with our PyPi package are provided [hier](/munichbioinformatics/contribution/#how-to-use-the-pypi-package).Also, a basic pretrained checkpoint is included in the SEPiA PyPI repository. To try the SEPiA model without any coding or computationally expensive training, you can visit a live website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below. If you want to know more details about our code [check this out](/munichbioinformatics/model/#graph-structure).
 
 ## How to use our graphical user interface 
 ### The structure of our UI 
