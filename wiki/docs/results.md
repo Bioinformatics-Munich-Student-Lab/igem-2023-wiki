@@ -10,7 +10,7 @@ Team Page
 
 # SEPiA Results
 
-Two machine learning models were developed to predict polypharmacy side effects. The first model was trained on pairwise drug data, similar to the approaches used by Decagon and SimVec, and the second model utilized true polypharmacy data from NSIDES, filtered to include only effects with at least 5000 total occurrences and drugs between 2 and 10.
+Two machine learning models were developed to predict polypharmacy side effects. The first model was trained on pairwise drug data, similar to the approaches used by Decagon [^1] and SimVec[^2], and the second model utilized true polypharmacy data from NSIDES [^3], filtered to include only effects with at least 5000 total occurrences and drugs between 2 and 10.
 
 ## Training, Testing, and Validation Sets
 The models were trained on 80% of the data, tested on 10%, and validated on another 10%. Using separate datasets for training, testing, and validation is crucial to ensure that the model is accurate, generalizable, and not overfitting to the training data. The testing set assesses the model's performance and tuning, while the validation set evaluates the model’s effectiveness on unseen data.
@@ -137,3 +137,13 @@ The binary predictions achieve an accuracy of 0.946 with a similar sensitivity (
 ## Interpretation of Result
 
 The SEPiA model shows promising results in predicting polypharmacy side effects, being competitive with state-of-the-art methods for pairwise predictions and extending current methodology to true polypharmacy. Its high AUC, sensitivity, and specificity suggest robust performance in both identifying true polypharmacy side effects and avoiding false alarms. These models can significantly aid in real-world applications, providing healthcare professionals and pharmacologists with valuable tools to anticipate and mitigate the adverse effects associated with polypharmacy, thereby enhancing patient safety and treatment efficacy.
+
+
+
+## Reference
+[^1]:  Decagon. Modeling polypharmacy side effects with graph convolutional networks
+Marinka Zitnik, Monica Agrawal, Jure Leskovec https://arxiv.org/abs/1802.00543 
+
+[^2]: Simvec. Lukashina, N., Kartysheva, E., Spjuth, O. et al. SimVec: predicting polypharmacy side effects for new drugs. J Cheminform 14, 49 (2022). https://doi.org/10.1186/s13321-022-00632-5
+
+[^3]: nSides. Vanguri, Rami S et al. “nSides: An interactive drug–side effect gateway.” (2017).
