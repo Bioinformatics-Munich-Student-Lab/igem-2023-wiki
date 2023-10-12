@@ -2,10 +2,12 @@
 # Contribution
 
 ## Introduction
-Polypharmacy means taking a lot of different medications at the same time, which can happen when a person has several health conditions or sees multiple doctors. While these medications can help with specific problems, they can also lead to problems like interactions, side effects, or confusion. Polypharmacy is one of the pressing issues of today's healthcare systems. It is defined as the concurrent use of five drugs or more by a single patient. Across Europe, polypharmacy is highly prevalent, with a prevalence of 32.1% for persons of age 65+ [^1]. The SEPiA Team took action, developed a neuronal network that can predict these side effects to prevent polypharmacy, and developed the first polypharmacy model that can use multiple drugs as input. Sepia is an attempt to provide a solution which is easy to use for patients, medical personnel as well as future researchers. To make sure that Sepia is as easy to use as possible, we developed both a user-oriented interface and python packages for easy distribution. With its user interface, Sepia can be a significant benefit for patients and doctors looking for side effects with prescribed medication. For research and development with Sepia, we offer an easy-to-use python package on PyPI [^2].Pretrained models and a docker container will also be made available through the Sepia GitHub repository [^3]. In the following, you can read about what kind of trouble we run into and what else you have to keep in mind if you want to do similar tasks.
+Polypharmacy is one of the pressing issues of today's healthcare systems. It is defined as the concurrent use of five drugs or more by a single patient. Across Europe, polypharmacy is highly prevalent, with a prevalence of 32.1% for persons of age 65+[^1]. Most of the issues with polypharmacy stem from the fact that drug-drug interactions and adverse side effects (ADRs) are not known or not considered in healthcare decisions.
+
+The SEPiA team took action. A novel graph-convolutional neural network that can predict polypharmacy side effects has been developed. To our knowledge, SEPiA is the first polypharmacy side effect model that can handle true polypharmacy, meaning that it is not limited to predict only side effects that are caused by pairs of drugs. SEPiA is an attempt to provide a solution which is easy to use for patients, medical personnel as well as future researchers. To ensure that SEPiA is as easy to use as possible, we developed both a user-oriented interface and python packages for easy distribution. For research and development with SEPiA, we offer an easy-to-use python package on PyPI[^2] as well as the source code, models and containers though the SEPiA git repository[^3].
 
 ## Data handling 
-Our first task was to find enough data to be able to properly train our model which also doesn’t take to many restrictions to work with these data. In the end we took data of the FDA which is already de-identified patient. One advantage of this decision was that we did have to pay for this data because it is for free available. When using these data you have to follow specific guidelines to pretect the patients.
+Training the SEPiA models requires data about polypharmacy side effects. Our first task was to find enough data to be able to properly train, test and validate the SEPiA model. We opted for the already de-identified, anonymized and freely available [nsides](https://tatonettilab.org/offsides/) dataset. This turned out to be a very good decision, as the dataset is large enough to be able to train the SEPiA model while also protecting the privacy of sensitive patient's data.
 
 ## Where to find Healtcare data
 | Method      | Description                          |
@@ -18,21 +20,25 @@ Our first task was to find enough data to be able to properly train our model wh
 | `Collaboration with Healthcare Providers`| hospitals, clinics, or healthcare institutions are able to provide de-identified patient data. To do this, you have to keep privacy regulations like HIPAA in the United States in mind|
 
 ## Deploying our model in different ways 
-We deploy our neural network in different ways. We deploy our model on our [Hugging Face account](https://huggingface.co/BioinformaticsMunichStudentLab), so people who may not be familiar with iGEM can benefit from our work and get in touch with our project. Another option is to download our code from our [GitLab](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) and use our model as a foundational model, adjusting our code to your application. Instructions on how to work with our PyPi package are provided [hier](/munichbioinformatics/contribution/#how-to-use-the-pypi-package). To try our model without any coding skills, you can visit our website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
+We deploy our neural network in different ways. We deploy our model on our [Hugging Face account](https://huggingface.co/BioinformaticsMunichStudentLab), so a pretrained checkpoint can be downloaded and other people who may not be familiar with iGEM can benefit from our work and get in touch with our project. Another option is to download our code from our [SEPiA Git repository ](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) use SEPiA as a foundational model, adjusting the code to the specific application at hand. Instructions on how to work with our PyPi package are provided [hier](/munichbioinformatics/contribution/#how-to-use-the-pypi-package).Also, a basic pretrained checkpoint is included in the SEPiA PyPI repository. To try the SEPiA model without any coding or computationally expensive training, you can visit a live website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
 
 ## How to use our graphical user interface 
 ### The structure of our UI 
 Our UI can be split into three parts: the search bar, the list of drugs, and the list of polypharmacy.
 In the middle of the screen is our search bar, which can be used to search for and add a drug. This can be done multiple times to add multiple drugs. On the left side of the screen is the list of drugs, which displays every drug that has been added through the search bar. Each listed drug has a delete button to remove it from the calculation. On the right side are listed polypharmacies that are likely to occur because of the added drugs. Each polypharmacy has a displayed score, indicating how likely it is to occur.
-### our vision how to use the model
-Here is how we envision it should be used: For example, you are a doctor and want to determine how dangerous it is to give your patient four specific drugs at the same time. You can add each drug through the search bar, make any necessary adjustments in the list of drugs, and check the calculations on the right. Now, you may want to explore similar drugs that have the same effect as the other drugs but a lower probability of causing polypharmacy.
-Now it's time to try our model yourself on [our website](http://sepia.bmsl.org/).
 
 !!! example "UI Demo Prototype"
     <figure markdown>
         ![Image title](https://static.igem.wiki/teams/5016/wiki/ui-demo-1.jpeg){ width=800" }
     <figcaption>This is the initial prototype for the UI that healthcare professionals would use to interact with our model</figcaption>
     </figure>
+
+### Future development
+We envision a tight integration into existing and novel clinical software. Ideally, a patient management system which already contains the necessary information about patient's condition and medication could be enhanced with SEPiA. Medication could automatically be checked for problematic combinations, suggesting substitutions where applicable.
+
+For patients, the website will be further improved by adding trivial or trade names to the list of drugs and the ability to search for medication by the indicating medical condition.
+Now it's time to try our model yourself on [our website](http://sepia.bmsl.org/).
+
 
 ## How to use the PyPI package
 1. Install the `sepia-polypharmacy` package from PyPI.
