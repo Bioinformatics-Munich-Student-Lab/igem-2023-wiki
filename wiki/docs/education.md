@@ -1,10 +1,10 @@
 ---
 template: custom/contentpage.html
 hero_text: Education
-hero_image1: https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg
-hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-2-left.webp
-hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-3.webp
-hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
+hero_image1: https://static.igem.wiki/teams/5016/wiki/education-img.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-4-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-5-right.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
 ---
 
 # Empowering the Future: SEPIA iGEM Team's Education Workshop on AI and Synthetic Biology
@@ -32,7 +32,7 @@ Additionally, this allowed the students to gain insight into the everyday tools 
 
 !!! example "Picture of the Workshop"
     <figure markdown >
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-1.jpg){ width="600"}
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-1.jpg){ width="1000"}
     <figcaption>Julius Schmidt explains the fundamentals of Neural Networks</figcaption>
     </figure>
 
@@ -67,7 +67,7 @@ Through engaging discussions and interactive sessions, we encouraged the student
 
 !!! example "Picture of the Workshop"
     <figure markdown>
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg){ width="600"}
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg){ width="1000"}
         
     <figcaption>Cheng-Wei Liao and Julius Schmidt talking about MNIST </figcaption>
     </figure>
@@ -85,6 +85,6 @@ This workshop exemplifies our commitment to innovative education and outreach, l
 
 ## Slide Deck
 
-<iframe src="https://static.igem.wiki/teams/5016/wiki/workshop-neuronale-netzwerke-2.pdf" width="100%" height="600"></iframe>
+<iframe src="https://static.igem.wiki/teams/5016/wiki/workshop-neuronale-netzwerke-2.pdf" width="100%" height="620"></iframe>
 
 [Check me out if you want to know more about MNIST and get the MNIST Data](https://en.wikipedia.org/wiki/MNIST_database)

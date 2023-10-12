@@ -1,3 +1,14 @@
+---
+template: custom/contentpage.html
+hero_text: Entrepreneurship
+hero_image1: https://static.igem.wiki/teams/5016/wiki/entrp-img-2.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-4-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-5-right.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
+---
+
+# Entrepreneurship and Commercial Viability
+
 ## Overview
 Adverse drug-drug interactions (DDIs) are a major cause of severe medical complications and a significant reason behind inefficiencies in treatments worldwide. We are deeply convinced that SEPiA has the potential to minimize the risk of adverse DDIs for safe medication use by not only empowering patients and healthcare providers with AI-driven insights but also by bringing the power of AI prediction to the world pharmacovigilance community and providing accurate and impartial DDI knowledge to pharmaceutical companies during the drug design process - for the benefit of humanity. 
 

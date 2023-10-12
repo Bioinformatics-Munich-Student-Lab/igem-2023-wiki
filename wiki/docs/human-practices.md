@@ -1,15 +1,11 @@
 ---
 template: custom/contentpage.html
 hero_text: Human Practices
-hero_image1: https://static.igem.wiki/teams/5016/wiki/human-practices-2.jpg
+hero_image1: https://static.igem.wiki/teams/5016/wiki/human-practices-3.jpg
 hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-2-left.webp
 hero_image3: https://static.igem.wiki/teams/5016/wiki/pills-falling-left.png
 hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
 ---
-
-<figure>
-<iframe title="MunichBioinformatics: Sepia Architecture Explainer (2023) [English]" width="1120" height="630" src="https://video.igem.org/videos/embed/d95b8649-d967-484b-9921-f1fc73a858fc" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
-</figure>
 
 # Human Practices: Our Work and the World
 

@@ -130,12 +130,12 @@ nav:
     # - Plant: plant.md
     # - Software: software.md
     # - Sustainable: sustainable.md
-  - Test:
-      - Test Upper: test_upper.md
-      - Test: test.md
-      - Test2: test_child.md
-      - Inner: description_alt.md
-      - Content Template Test: content_template_test.md
+  # - Test:
+  #     - Test Upper: test_upper.md
+  #     - Test: test.md
+  #     - Test2: test_child.md
+  #     - Inner: description_alt.md
+  #     - Content Template Test: content_template_test.md
   # - Contact: contact.md
 
 extra:
