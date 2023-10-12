@@ -85,6 +85,6 @@ This workshop exemplifies our commitment to innovative education and outreach, l
 
 ## Slide Deck
 
-<iframe src="https://static.igem.wiki/teams/5016/wiki/workshop-neuronale-netzwerke-2.pdf" width="100%" height="620"></iframe>
+<iframe src="https://static.igem.wiki/teams/5016/wiki/workshopneuronalenetzwerke-3.pdf" width="100%" height="620"></iframe>
 
 [Check me out if you want to know more about MNIST and get the MNIST Data](https://en.wikipedia.org/wiki/MNIST_database)
