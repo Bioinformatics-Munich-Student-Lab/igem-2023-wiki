@@ -1,3 +1,12 @@
+---
+template: custom/contentpage.html
+hero_text: Education
+hero_image1: https://static.igem.wiki/teams/5016/wiki/education-presentation-picture-2.jpg
+hero_image2: https://static.igem.wiki/teams/5016/wiki/blur-2-left.webp
+hero_image3: https://static.igem.wiki/teams/5016/wiki/blur-3.webp
+hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
+---
+
 # Empowering the Future: SEPIA iGEM Team's Education Workshop on AI and Synthetic Biology
 
 In fostering a deeper understanding of cutting-edge technology, the Bioinformatics Munich iGEM team recently conducted a captivating workshop for a high school class.\

@@ -1,7 +1,9 @@
 {% extends "main.html" %}
 
 {% block hero %}
+    {% include "custom/partials/custom_hero_content.html" %}
     <!--<div class="md-grid md-post--excerpt">-->
+    <h1 class="md-grid">Our Team</h1>
     <div class="md-grid md-post--excerpt team-members">
         {% with name="finn" %}
             {% include "custom/partials/custom_team.html" %}
