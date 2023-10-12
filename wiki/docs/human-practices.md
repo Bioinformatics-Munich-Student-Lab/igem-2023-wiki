@@ -8,7 +8,7 @@ hero_image4: https://static.igem.wiki/teams/5016/wiki/blur-1-right.webp
 ---
 
 <figure>
-<iframe title="MunichBioinformatics: sepia explainer (2023) [English]" width="560" height="315" src="https://video.igem.org/videos/embed/d95b8649-d967-484b-9921-f1fc73a858fc" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+<iframe title="MunichBioinformatics: Sepia Architecture Explainer (2023) [English]" width="1120" height="630" src="https://video.igem.org/videos/embed/d95b8649-d967-484b-9921-f1fc73a858fc" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
 </figure>
 
 # Human Practices: Our Work and the World
