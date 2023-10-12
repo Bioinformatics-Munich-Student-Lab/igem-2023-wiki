@@ -12,6 +12,13 @@ After this step of requirements engineering and gaining an overview of previous 
 Decagon excels at predicting the pairwise interactions between well-characterized drugs, but its performance is limited for drugs that are not well characterized (and typically more novel or rarely prescribed).
 This is a tradeoff we felt comfortable making, as we knew that a typical patient would be taking mostly well-characterized substances.
 
+
+<figure markdown >
+    ![Decagon multimodal graph](https://static.igem.wiki/teams/5016/wiki/decagon.jpg){ width="600"}
+<figcaption>The multimodal graph used by Decagon. Figure from Zitnik et al. 2018.</figcaption>
+</figure>
+
+
 However, both the dataset used for training and the codebase of Decagon proved to be seriously outdated.
 Instead of extending an six-year-old codebase and forever locking our project into `tensorflow 2.7`, we chose to create a new training dataset from drug interaction adverse events reported to the FDA, and reimplement Decagon as our first deliverable.
 For this, we split into sub-teams and used agile software development techniques, with weekly synchronization meetings to keep all parts of our projects working smoothly with each other.
@@ -25,6 +32,11 @@ So we decided to take an alternative approach, and find a way to encode the hype
 We added another node type to the graph that represents multi-drug interactions.
 During the graph construction, all interactions present in the training data are added as a node to the graph, and a connection to each of the drugs present in the interaction is added.
 The model then learns this graph structure, turning the multidrug interaction problem from a hyperedge prediction problem into a simple link prediction problem.
+
+<figure markdown >
+    ![Decagon multimodal graph](https://static.igem.wiki/teams/5016/wiki/hypergraph.jpg){ width="600"}
+<figcaption>Our approach to encode true polypharmacy interactions in a simple graph model.</figcaption>
+</figure>
 
 After implementing this in our second sprint, we found that the graph constructed to train the model would incorporate all of the information required, but crash during the training process because it was using more memory than our computers had.
 So we focused our next sprint on optimizing the model, reducing memory utilization by deduplicating the graph before training and streamlining the training process.
