@@ -4,17 +4,16 @@
     <link rel="stylesheet" href="homepage_real_Buttons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <style>
-
         body {
         font-family: 'Montserrat', sans-serif;
         line-height: 1;
+        overflow-y:scroll
         }
 
         iframe {
             border-radius: 10px;
-            width: 100%;
-            height: 100%;
-            max-height: 100%;
+            width: 100vw;
+            height: 100vh;
         }
 
         .background_purple {
@@ -50,7 +49,6 @@
             radial-gradient(at 95% 45%, #c863c6 0, transparent 25%),
             radial-gradient(at 60% 71%, #9b56b5 0, transparent 29%);
             width: 100%;
-            height: 85rem;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -65,7 +63,6 @@
             radial-gradient(at 10% 27%, #6072ff 0, transparent 25%), 
             radial-gradient(at 95% 45%, #0d20cb 0, transparent 45%);
             width: 100%;
-            height: 170vh;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -79,8 +76,6 @@
             radial-gradient(at 20% 50%, hsl(273, 60%, 35%) 0, transparent 59%), 
             radial-gradient(at 82% 65%, #7f00e1 0, transparent 40%);
             width: 100%;
-            min-height: 86vh;
-            height: auto;
             margin: 0; 
             padding: 0;
             display: flex;
@@ -159,12 +154,12 @@
                 -webkit-backdrop-filter: blur( 14.5px );
                 border-radius: 10px;
                 border: 1px solid rgba(207, 84, 226, 0.18);
-                width: 61rem; 
-                height: 170rem;
+                width: 61rem;
                 margin-top: 5%;
                 margin-bottom: 5%;
                 display: flex;
                 justify-content: center;
+                min-height: 20rem;
             }
         .box_video {
                 background: rgba(25, 0, 255, 0.1); 
@@ -175,7 +170,7 @@
                 border: 1px solid rgba( 255, 255, 255, 0.18 );
                 width: 61rem; 
                 height: auto;
-                min-height: 40rem;
+                min-height: 30rem;
                 margin-top: 5%;
                 margin-bottom: 5%;
                 display: flex;
@@ -190,7 +185,6 @@
                 border-radius: 10px;
                 border: 1px solid rgba( 255, 255, 255, 0.18 );
                 width: 29.8rem;
-                height: auto;
                 margin-top: 5%;
                 margin-bottom: 5%;
                 margin-left: 0;
@@ -208,7 +202,6 @@
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             width: 29.8rem;
-            height: 30rem;
             margin-top: 10%;
             margin-bottom: 5%;
             margin-right: 22%;
@@ -250,18 +243,28 @@
         }
 
         .gradient_Headline_start {
-            font-size: 100px; 
-            margin-bottom: 0px;
-            background: #471DCF;
-            background: linear-gradient(to top, #471DCF 0%, #CCC1CF 74%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                font-size: 60px; /* Decreased font size for mobile */
+                margin-bottom: 20px; /* Added margin for spacing */
+                background: #471DCF;
+                background: linear-gradient(to top, #c1246b 0%, #CCC1CF 74%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center; /* Center align text */
+            }
+
+        .Headline_start {
+            font-size: 20px; 
+            margin: 3%;
+            margin-top: 3vh;
+            text-align: center;
+            color: #CCC0CF ;
         }
 
         .gradient_Headline_Graphs {
             font-size: 100px; 
             margin-bottom: 0px;
+            margin-top: 5%;
             background: #471DCF;
             background: linear-gradient(to top, #471DCF 0%, #CCC1CF 74%);
             background-clip: text;
@@ -272,6 +275,8 @@
         .gradient_text_Headline_poly {
             font-size: 65px; 
             margin: 0px;
+            margin-top: 3%;
+            margin-bottom: 3%;
             padding-bottom: 10px;
             background: #11147F;
             background: linear-gradient(to top, #11147F 0%, #CCC1CF 74%);
@@ -301,19 +306,12 @@
         .text_standard {
             font-size: 30px; 
             margin: 3%;
+            margin-bottom: 6%;
             text-align: center;
-        }
-
-        #scrolling-image {
-            width: 500px; /* Adjust the width as needed */
-            position: absolute;
-            top: 0;
-            transition: top 0.5s ease; /* Add smooth transition effect */
         }
 
         .parallax-image {
             filter: grayscale(100%) contrast(140%) brightness(140%);
-            height: 10rem;
             transition: transform 0.2s ease-out;
             top: 0;
             left: 0;
@@ -322,24 +320,24 @@
         .spline{
                 height: 100vh;     
                 }
+        .sepia_logo{
+            margin-top: 15vh;
+            width: 45vh;
+        }
+
+
         /* Add a media query for screens with a maximum width of 768px (adjust as needed) */
         @media (max-width: 768px) {
             .background_end {
-                height: 140vh;
                 padding-bottom: 2rem; /* Add some space at the bottom */
             }
-
+            .iframe_video{
+                max-height: 20vh
+            }
             .box_video {
-                width: 100%;
-                height: auto;
+                width: 95%;
                 min-height: 40vh;
                 padding: 0 1rem; /* Add horizontal padding */
-            }
-
-            iframe {
-                border-radius: 10px; /* Remove border-radius for iframe */
-                height: auto;
-                width: 100%;
             }
 
             .background_end_pill {
@@ -386,9 +384,10 @@
                 }
 
             .box_large {
-                width: 100%; /* Use full width on mobile */
+                width: 95%; /* Use full width on mobile */
                 height: auto; /* Adjust height based on content */
                 flex-direction: column; /* Stack content vertically on mobile */
+                min-height: 20rem;
             }
 
             .background_big_purple {
@@ -411,14 +410,22 @@
             }
 
             .gradient_Headline_start {
-                font-size: 60px; /* Decreased font size for mobile */
+                font-size: 25px; /* Decreased font size for mobile */
                 margin-bottom: 20px; /* Added margin for spacing */
                 background: #471DCF;
-                background: linear-gradient(to top, #471DCF 0%, #CCC1CF 74%);
+                background: linear-gradient(to top, #c1246b 0%, #CCC1CF 74%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 text-align: center; /* Center align text */
+            }
+
+            .Headline_start {
+                font-size: 12px; 
+                margin: 3%;
+                margin-top: 3vh;
+                text-align: center;
+                color: #CCC0CF ;
             }
 
             .text_standard {
@@ -472,6 +479,7 @@
                 margin: 0;
                 margin-bottom: 10%;
                 margin-top: 10%;
+                margin-right: 0;
                 padding: 0;
                 display: flex;
                 align-items: center;
@@ -493,6 +501,23 @@
             display: flex;
             flex-direction: column; /* Change flex direction for stacking on mobile */
             align-items: center;
+        }
+
+        .sepia_logo{
+            width: 20vh;        
+        }
+
+        .gradient_text_Headline_poly {
+            font-size: 25px; 
+            margin: 0px;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            padding-bottom: 10px;
+            background: #11147F;
+            background: linear-gradient(to top, #11147F 0%, #CCC1CF 74%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         }
