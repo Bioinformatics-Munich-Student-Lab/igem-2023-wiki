@@ -2,7 +2,9 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #00acee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-container img {
@@ -15,11 +17,6 @@
 
 .hero-headline {
     z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     padding: 1rem;
 
     border-radius: 0.7rem;
