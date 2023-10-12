@@ -55,7 +55,7 @@ In order to make an assessment of our situation, we conducted a Strengths-Weakne
 
 !!! example "SEPiA SWOT-Analysis"
     <figure markdown>
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/swot-analysis.png){ width=700" }
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/swot-analysis.png){ width=1000" }
     <figcaption>**Fig. 1** | SWOT-Analysis</figcaption>
     </figure>
 
@@ -67,7 +67,7 @@ The Business Model Canvas allows for a comprehensive overview of a business mode
 
 !!! example "SEPiA Business Model Canvas"
     <figure markdown>
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/business-model-canvas-custom.png){ width=700" }
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/business-model-canvas-custom.png){ width=1000" }
     <figcaption> **Fig. 2** | Business Model Canvas</figcaption>
     </figure>
 
@@ -93,7 +93,7 @@ The following illustration depicts this strategy separated into phases. Currentl
 
 !!! example "SEPiA Strategy"
     <figure markdown>
-        ![Image title](https://static.igem.wiki/teams/5016/wiki/strategy-blue.png){ width=700" }
+        ![Image title](https://static.igem.wiki/teams/5016/wiki/strategy-blue.png){ width=1000" }
     <figcaption>**Fig. 3** | Strategy</figcaption>
     </figure>
 
