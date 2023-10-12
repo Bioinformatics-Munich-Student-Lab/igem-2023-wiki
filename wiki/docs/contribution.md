@@ -18,7 +18,7 @@ Our first task was to find enough data to be able to properly train our model wh
 | `Collaboration with Healthcare Providers`| hospitals, clinics, or healthcare institutions are able to provide de-identified patient data. To do this, you have to keep privacy regulations like HIPAA in the United States in mind|
 
 ## Deploying our model in different ways 
-We want to deploy our neural network in different ways. We deploy our model on [Hugging Face](https://huggingface.co/BioinformaticsMunichStudentLab), so people who may not be familiar with iGEM can benefit from our work. Another option is to download our code from our GitLab and use our model as a foundational model, adjusting our code to your application. Instructions on how to work with our [GitLab](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) are provided in contribution. To try our model without any coding skills, you can visit our website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
+We deploy our neural network in different ways. We deploy our model on our [Hugging Face account](https://huggingface.co/BioinformaticsMunichStudentLab), so people who may not be familiar with iGEM can benefit from our work and get in touch with our project. Another option is to download our code from our [GitLab](https://gitlab.igem.org/2023/software-tools/munichbioinformatics) and use our model as a foundational model, adjusting our code to your application. Instructions on how to work with our PyPi package are provided [hier](/munichbioinformatics/contribution/#how-to-use-the-pypi-package). To try our model without any coding skills, you can visit our website and test its accuracy. Instructions on how to use [our website](http://sepia.bmsl.org/) are outlined below.
 
 ## How to use our graphical user interface 
 ### The structure of our UI 
@@ -26,6 +26,7 @@ Our UI can be split into three parts: the search bar, the list of drugs, and the
 In the middle of the screen is our search bar, which can be used to search for and add a drug. This can be done multiple times to add multiple drugs. On the left side of the screen is the list of drugs, which displays every drug that has been added through the search bar. Each listed drug has a delete button to remove it from the calculation. On the right side are listed polypharmacies that are likely to occur because of the added drugs. Each polypharmacy has a displayed score, indicating how likely it is to occur.
 ### our vision how to use the model
 Here is how we envision it should be used: For example, you are a doctor and want to determine how dangerous it is to give your patient four specific drugs at the same time. You can add each drug through the search bar, make any necessary adjustments in the list of drugs, and check the calculations on the right. Now, you may want to explore similar drugs that have the same effect as the other drugs but a lower probability of causing polypharmacy.
+Now it's time to try our model yourself on [our website](http://sepia.bmsl.org/).
 
 !!! example "UI Demo Prototype"
     <figure markdown>
@@ -65,6 +66,9 @@ Our primary objective is to inspire students in the early stages of their career
 If you want to join the BIOINFORMATICS MUNICH STUDENT LAB E.V. or just want more information, [click here](https://bmsl.org/) to go to our website.
 
 # how future iGEM teams can benefit from our project 
+The groundwork we've established in our project offers benefits to other iGEM teams. Our efforts have created an opportunity for future teams to elevate the project to greater levels. Initially, they can capitalize on our pre-existing codebase and enhance our machine learning model. By expanding the dataset, incorporating more diverse sources of data, and delving into the integration of omics data, they can enhance the accuracy and versatility of the model. Instead of relying solely on data from the USA, teams can source information from different populations, including Europe, ensuring a more comprehensive and globally applicable approach to mitigating polypharmacy risks.
+
+Moreover, for iGEM teams keen on developing healthcare applications, our project provides an invaluable head start. They can seamlessly integrate our machine learning model into their software projects, instantly incorporating a functional and vital feature. This not only expedites the development process but also ensures that their applications are equipped with the latest advancements in predicting drug interactions, potentially making a meaningful impact on patient safety and healthcare outcomes.
 
 [^1]: https://doi.org/10.1016/j.archger.2018.06.018
 
