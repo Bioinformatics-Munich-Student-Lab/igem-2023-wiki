@@ -342,18 +342,18 @@ loss_sepia.backward(retain_graph=True)
 sepia_optimiser.step()
 ```
 **5. Validation**: \
-The model is validated on a separate dataset to predicts the side effects.
+The model is validated on a separate dataset to predict the side effects.
 
 
 ### Key Model Features:
 **Polypharmacy Modelling**: \
-The hypernode graph structure are able to handle true polypharmacy interactions.  
+The hypernode graph structure can handle true polypharmacy interactions.  
 
 **Heterogeneous Graph Processing**: \
-The model can handle graphs with multiple types of nodes and edges, making it suitable for further incorperating with other biological data.
+The model can handle graphs with multiple nodes and edges, making it suitable for further incorporation with other biological data.
 
 **Chemical Structure Embedding**: \
-Enhances the model's understanding of the drug chemical structure.
+Enhances the model's understanding of the drug's chemical structure.
 
 ## References
 
