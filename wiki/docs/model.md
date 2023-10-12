@@ -8,43 +8,48 @@ hero_image4: https://static.igem.wiki/teams/5016/wiki/blank.png
 ---
 
 # Model
+
+## Introduction Video for SEPIA
+
+A simplified example to explain how SEPIA predicts polypharmacy side effects using a hetero graph neural network.
+
 <figure>
-<iframe title="MunichBioinformatics: Sepia Architecture Explainer (2023) [English]" width="1120" height="630" src="https://video.igem.org/videos/embed/d95b8649-d967-484b-9921-f1fc73a858fc" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+<iframe title= "MunichBioinformatics: Sepia Architecture Explainer (2023) [English]" width= "1120" height= "630" src=" https://video.igem.org/videos/embed/d95b8649-d967-484b-9921-f1fc73a858fc" frameborder=" 0" allowfullscreen="" sandbox=" allow-same-origin allow-scripts allow-popups"></iframe>
 </figure>
 
 
 ## Polypharmacy Dataset
 We illustrated 2 datasets that provide information about polypharmacy. 
 
-The first dataset is a preprocessed train/test/validation dataset, provided within the Decagon paper [^1]. The dataset incorporates human drug-drug interaction networks with side effects as indication of polypharmacy interactions, all compiled from different sources. 
+The first dataset is a preprocessed train/test/validation dataset provided within the Decagon paper [^1]. The dataset incorporates human drug-drug interaction networks with side effects indicating polypharmacy interactions, all compiled from different sources. 
 
-Second dataset uses data from NSIDES [^2] project databank, which includes data for drug side effects (OFFSIDES) and drug-drug pair side effects (TWOSIDES). These data represent an update from the data released to include adverse events reported to the FDA through database FDA Adverse Event Reporting System (FAERS) up to and including 2014, that contains information on adverse event and medication error. The dataset incorporates clinical reports with the taken drugs with their side effects, which in the report contains 1 to 49 drug combinations with reported side effects.
+The second dataset uses data from the nSides [^2] project databank, which includes data for drug side effects (OFFSIDES) and drug-drug pair side effects (TWOSIDES). These data represent an update from the data released on adverse events reported to the FDA through the FDA Adverse Event Reporting System (FAERS) up to and including 2014, which contains information on adverse events and medication errors. The dataset incorporates clinical reports of the taken drugs with their side effects, which includes 1 to 49 drug combinations with reported side effects.
 
 ### Dataset Preprocessing
 
 #### Dacagon Dataset
 
-This dataset is already preprocessed, details see [^4]
+This dataset has already been preprocessed, details in SimVec[^3]
 
-#### Nsides Dataset
+#### nSides Dataset
 
 * **Extract Chemical Structure Embeddings**
 
-We downloaded the entire STITCH databank version 5.0 with the names and SMILES strings of STITCH's chemicals. The the SMILES were canonicalized before the extraction of the chemical structure embeddings from MolFolmer (cite needed), chemicals are filtered when the extracted embeding is NA. Thus, we stored STITCH id, drug names and their chemical embedding into a table.
+We downloaded the entire STITCH databank version 5.0[^4] with the names and SMILES[^5] strings of STITCH's chemicals. The SMILES were canonicalized before extracting the chemical structure embeddings from MolFolmer (cite needed); chemicals are filtered when the extracted embedding is NA. Thus, we stored the STITCH ID, drug names, and their chemical embedding in a table.
 
-* **Map Drug Names from Nsides with STITCH id**
+* **Map Drug Names from nSides with STITCH**
 
-The drug concept name from Nsides dataset were mapped with the drug names from the table with STITCH id, drug names and their chemical embedding. Drugs that can't be mapped are filtered. Thus, we stored the processed drug category from Nsides with STITCH id, drug names and their chemical embedding into a table.
+The drug concept names from the nSides dataset were mapped with the drug names from the table with STITCH ID, drug names, and their chemical embedding. Drugs that can't be mapped are filtered. Thus, we stored the processed drug category from nSides with STITCH ID, drug names, and their chemical embedding into a table.
 
 * **Quality Control and Dataset Splitting**
 
-In quality contrial, report ids that contains any drugs that is not in our drug category are removed and we selected reports with 2 to 10 drug combination usage. After quality control, the dataset is splited into train, validation, and test set in 0.8, 0.1, 0.1 ratio respectively by the report ids.
+In quality control, report IDs containing any drugs not in our drug category are removed, and we selected reports with 2 to 10 drug combination usage. After quality control, the dataset is split into train, validation, and test set in 0.8, 0.1, and 0.1 ratio by the report IDs.
 
 
 
 ### Preprocessed Dataset
 
-|                                          | Decagon | Nsides  |
+|                                          | Decagon | nSides  |
 |------------------------------------------|---------|---------|
 | Number of Drugs                          | 645     | 2204    |
 | Number of Side Effects                   | 963     | 17552   |
@@ -56,18 +61,18 @@ In quality contrial, report ids that contains any drugs that is not in our drug 
 
 ## Graph Structure
 
-We construct a knowledge graph (KG). The graph consists of nodes of two types, drugs and hypernodes. The edges of the graph correspond to different drug combinations. The node feature of the drugs are based on chemical structures, and each hypernode feature signifies the side effects.
+We construct a knowledge graph (KG). The graph consists of nodes of two types: drugs and hypernodes. The edges of the graph correspond to different drug combinations. The node features of the drugs are based on chemical structures, and each hypernode feature signifies the side effects.
 
 ## Chemical Structure Embeddings
 
-The chemical structure embeddings are extracted using MOLFORMER, a large-scale chemical language representations to capture molecular structure and properties published by IBM. Which employs a linear attention mechanism, coupled with highly distributed training, on sequences of 1.1 billion unlabelled molecules from the PubChem and ZINC datasets. The chemical language embedding were extracted for Nsides dataset, the SMILES of the drugs were used to generate the embedding to provide biological meaningful information.
+The chemical structure embeddings are extracted using MolFolmer [^5], a large-scale chemical language representation to capture molecular structure and properties published by IBM, which employs a linear attention mechanism, coupled with highly distributed training, on sequences of 1.1 billion unlabelled molecules from the PubChem and ZINC datasets. The chemical language embedding was extracted for the nSides dataset, and the SMILES of the drugs were used to generate the embedding to provide meaningful biological information.
 
 ## Introduction to SAGEConv Architecture
 
-SAGEConv learns node representations by aggregating information from the neighborhood of each node, which allows it to capture more complex features. SAGEConv uses degree-normalized aggregation function allows SAGEConv to capture more fine-grained information about the local neighborhood of each node, which can be particularly useful in tasks such as link prediction and graph classification.
+SAGEConv[^6] learns node representations by aggregating information from each node's neighborhood, allowing it to capture more complex features. SAGEConv uses a degree-normalized aggregation function that allows SAGEConv to capture more fine-grained information about the local neighborhood of each node, which can be particularly useful in tasks such as link prediction and graph classification.
 
 
-## Hetrograph Construction
+## Heterograph Construction
 
 ### Nodes
 
@@ -86,7 +91,7 @@ graph = HeteroData({
 })
 ```
 
-* **Hypernodes**: Represented the polypharmacy cases, these nodes store aggregated information of side effects caused by drug combinations.
+* **Hypernodes**: Represented in polypharmacy cases, these nodes store aggregated information on side effects caused by drug combinations.
 
 ```mermaid
 graph TD
@@ -103,9 +108,9 @@ graph["hypernodes"].effect_ids = [torch.tensor(item) for item in polypharmacy_gr
 
 ### Edges
 
-* **Hyperedge Part 1**: Directed edges connecting drug nodes to hypernodes, indicating that a certain combination of drugs is associated with specific side effects stored in the hypernodes.
+* **Hyperedge Part 1**: Directed edges connecting drug nodes to hypernodes, indicating that a particular combination of drugs is associated with specific side effects stored in the hypernodes.
 
-* **Hyperedge Part 2**: Directed edges connecting hypernodes back to drug nodes. These edges, in conjunction with Hyperedge Part 1, form hyperedges that encapsulate the relationships between drug combinations and their side effects.
+* **Hyperedge Part 2**: Directed edges connecting hypernodes back to drug nodes. In conjunction with Hyperedge Part 1, these edges form hyperedges that encapsulate the relationships between drug combinations and their side effects.
 
 ```mermaid
 graph TD
@@ -133,7 +138,6 @@ graph["hypernodes", "hyperedge_part_2", "drugs"].edge_index = torch.cat(
     )
 ).reshape(-1, len(polypharmacy_grouped["drug_combination"].explode())
 ).to(torch.int64)
-    
 ```
 
 
@@ -183,9 +187,9 @@ Graph representation of the biological data, including drugs, proteins, and thei
 Embeddings representing the drug combinational interactions and effects. 
 
 * **Architecture**: \
-Consists of SAGEConv instances for processing heterogeneous graph data, and an embedding layer for side effects.
+It consists of SAGEConv instances for processing heterogeneous graph data and an embedding layer for side effects.
 
-``` python title="encoder"
+```python
 class Encoder(nn.Module):
     def __init__(self, emb_dim, n_effects, n_hops):
         super(Encoder, self).__init__()
@@ -236,16 +240,16 @@ class Decoder(nn.Module):
 Graph, Batch size, and number of side effects we want to generate.
 
 * **Output**: \
-Randomly generated node ids and side effects.
+Randomly generated node IDs and side effects.
 
 * **Functionality**: \
 Generate negative samples (Random Side effects) for training the SEPIA model.
 
     1. **Compute Distribution**: Calculates the distribution of hyperedge sizes in the graph using the hyperedge_size_distribution(graph) function.
 
-    2. **Random Number of Nodes**: Randomly selects a number of nodes to include in each negative sample, based on the computed distribution. This means each negative sample could have a different number of nodes.
+    2. **Random Number of Nodes**: Randomly selects several nodes to include in each negative sample based on the computed distribution. This means each negative sample could have a different number of nodes.
 
-    3. **Generate Negative Samples**: For each batch, randomly selects a set of nodes and an effect to create a negative sample. The nodes are selected randomly from the "drugs" node type in the graph, and the effects are chosen randomly from the total number of possible effects.
+    3. **Generate Negative Samples**: Each batch randomly selects a set of nodes and an effect to create a negative sample. The nodes are selected randomly from the "drugs" node type in the graph, and the effects are chosen randomly from the total number of possible effects.
 
 
 
@@ -273,11 +277,11 @@ def random_neg_sample(graph, batch_size, n_effects):
 
 ## Training Description
 
-The training involves both the training of the SEPIA model and the negative sampler for negative sampling. The MLPgenerator generates negative samples to compare with the positive sample for SEPIA to seperate important features from noise.  The process is iterative, optimizing the model's parameters to better predict the side effects of drug interactions.
+The training involves data/model loading, negative sampling, forward pass, loss computation, and model update and validation. The process is iterative, optimizing the model's parameters to predict the side effects of drug interactions better.
 
 ### Step by Step Training: 
 
-**1. Costum Graph Dataloading**: 
+**1. Custom Graph Data loading**: 
 
 Load the heterograph data in batches with the positive samples and the model.
 
@@ -298,7 +302,7 @@ for pos_mask, pos_nodes, pos_effect_ids, hypernode_ids in tqdm(train_loader, des
 
 **2. Negative Sampling**: 
 
-Generate negative sample to add noise in model training.
+Generate a negative sample to add noise in model training and let the model separate important features from noise.
 
 
 ```python
@@ -307,7 +311,7 @@ neg_nodes, neg_effect_ids = random_neg_sample(train_graph, batch_size, len(train
 
 
 **3. Forward Pass**:  \ 
-The SEPIA model takes the positive/negative graphs, processes it through the encoder to get embeddings, and then through the decoder to get side effect predictions.
+The SEPIA model takes the positive/negative graphs, processes them through the encoder to get embeddings, and then through the decoder to get side effect predictions.
 
 ```python
 pos_preds = model(subgraph, pos_nodes, pos_effect_ids)
@@ -316,16 +320,15 @@ neg_preds = model(subgraph, neg_nodes, neg_effect_ids)
 ```
 
 
-**4. Loss Computation**:  \
-Computes the loss using a binary cross-entropy loss function, considering both positive and negative samples.
-Backpropagation: Gradients are calculated and the model’s parameters are updated using an optimizer.
+**4. Loss Computation and Model Update**:  \
+Computes the loss using a binary cross-entropy loss function, considering both positive and negative samples. Then, using backpropagation to calculate gradients and update the model's parameters are updated using an optimizer.
 
 
 ```python
 # concatinate positive/negative predictions
 preds = torch.cat((pos_preds, neg_preds))
 
-# concatinate positive/negative labels
+# concatinate positive/negative label
 labels = torch.cat((
     torch.ones(len(pos_nodes)),
     torch.zeros(len(neg_nodes))
@@ -337,15 +340,14 @@ loss_sepia.backward(retain_graph=True)
 
 # update model parameters
 sepia_optimiser.step()
-
 ```
 **5. Validation**: \
-The model is evaluated on the validation dataset, where it predicts side effects for given interactions with the same training steps from 1 to 4.
+The model is evaluated on the validation dataset, which predicts side effects for interactions with the same training steps from 1 to 4.
 
 
 ### Key Model Features:
 **Polypharmacy Modelling**: \
-The data structure is designed to handle interactions between n drugs and m reports with O(nm) edges and .  
+The data structure is designed to handle interactions between n drugs and m reports with O(nm) edges.  
 
 **Heterogeneous Graph Processing**: \
 The model can handle graphs with multiple types of nodes and edges, making it suitable for complex biological data.
@@ -354,22 +356,23 @@ The model can handle graphs with multiple types of nodes and edges, making it su
 Enhances the training process by generating negative samples.
 
 **Modular Architecture**:\
- The separation of encoder and decoder allows for flexibility and adaptability to different data and tasks.
+The model uses hetero-graph with sparse tensors as node features, allowing memory-efficient processing.
 
 
 ## References
 
-[^1]: Marinka Zitnik, Monica Agrawal, Jure Leskovec, Modeling polypharmacy side effects with graph convolutional networks, Bioinformatics, Volume 34, Issue 13, July 2018, Pages i457–i466, https://doi.org/10.1093/bioinformatics/bty294
+[^1]: Decagon. Marinka Zitnik, Monica Agrawal, Jure Leskovec, Modeling polypharmacy side effects with graph convolutional networks, Bioinformatics, Volume 34, Issue 13, July 2018, Pages i457–i466, https://doi.org/10.1093/bioinformatics/bty294
 
-[^2]: Vanguri, Rami; Romano, Joseph; Lorberbaum, Tal; Youn, Choonhan; Nwankwo, Victor; Tatonetti, Nicholas (2017). nSides: An interactive drug--side effect gateway. figshare. Dataset. https://doi.org/10.6084/m9.figshare.5483698.v2
+[^2]: nSides. Vanguri, Rami; Romano, Joseph; Lorberbaum, Tal; Youn, Choonhan; Nwankwo, Victor; Tatonetti, Nicholas (2017). nSides: An interactive drug--side effect gateway. figshare. Dataset. https://doi.org/10.6084/m9.figshare.5483698.v2
 
-[^3]: David Weininger. 1988. SMILES, a chemical language and information system. 1. introduction to methodology and encoding rules. J. Chem. Inf. Comput. Sci. 28, 1 (February 1988), 31–36. https://doi.org/10.1021/ci00057a005
+[^3]: Simvec. Lukashina, N., Kartysheva, E., Spjuth, O. et al. SimVec: predicting polypharmacy side effects for new drugs. J Cheminform 14, 49 (2022). https://doi.org/10.1186/s13321-022-00632-5
 
-[^4] Decagon dataset preprocessing. https://github.com/jbr-ai-labs/simvec/blob/main/data/data_preprocessing.ipynb 
+[^4]: STITCH databank. Damian Szklarczyk, Alberto Santos, Christian von Mering, Lars Juhl Jensen, Peer Bork, Michael Kuhn, STITCH 5: augmenting protein–chemical interaction networks with tissue and affinity data, Nucleic Acids Research, Volume 44, Issue D1, 4 January 2016, Pages D380–D384, https://doi.org/10.1093/nar/gkv1277
 
-[^5] STITCH databank. http://stitch.embl.de/
+[^5]: SMILES. David Weininger. 1988. SMILES, a chemical language and information system. 1. introduction to methodology and encoding rules. J. Chem. Inf. Comput. Sci. 28, 1 (February 1988), 31–36. https://doi.org/10.1021/ci00057a005
 
-[^6] Molformer. https://github.com/IBM/molformer
+[^6]: Molformer. Large-Scale Chemical Language Representations Capture Molecular Structure and Properties
+Jerret Ross, Brian Belgodere, Vijil Chenthamarakshan, et al. https://arxiv.org/abs/2106.09553 
 
-[^7] Inductive Representation Learning on Large Graphs
+[^7]: SAGEConv. Inductive Representation Learning on Large Graphs
 William L. Hamilton, Rex Ying, Jure Leskovec https://arxiv.org/abs/1706.02216 
